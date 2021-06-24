@@ -1,0 +1,515 @@
+{
+	"root": true,
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaVersion": 2021,
+		"project": "./tsconfig.json",
+		"sourceType": "module"
+	},
+	"plugins": [
+		"@typescript-eslint"
+	],
+	"extends": [
+		"eslint:recommended", // https://github.com/eslint/eslint/blob/master/conf/eslint-recommended.js
+		"plugin:@typescript-eslint/eslint-recommended", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/src/configs/eslint-recommended.ts
+		"plugin:@typescript-eslint/recommended" // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/src/configs/recommended.ts
+	],
+	"rules": {
+		/*** Possible Errors ***/
+
+		/* eslint:recommended */
+		// "for-direction": "error",											/* enforce "for" loop update clause moving the counter in the right direction. */
+		// "no-async-promise-executor": "error",					/* disallow using an async function as a Promise executor */
+		// "no-compare-neg-zero": "error",								/* disallow comparing against -0 */
+		// "no-cond-assign": "error",											/* disallow assignment operators in conditional expressions */
+		// "no-constant-condition": "error",							/* disallow constant expressions in conditions */
+		// "no-control-regex": "error",										/* disallow control characters in regular expressions */
+		// "no-debugger": "error",												/* disallow the use of `debugger` */
+		// "no-dupe-else-if": "error",										/* disallow duplicate conditions in if-else-if chains */
+		// "no-duplicate-case": "error",									/* disallow duplicate case labels */
+		// "no-empty": "error",														/* disallow empty block statements */
+		// "no-empty-character-class": "error",						/* disallow empty character classes in regular expressions */
+		// "no-ex-assign": "error",												/* disallow reassigning exceptions in `catch` clauses */
+		// "no-inner-declarations": "error",							/* disallow variable or `function` declarations in nested blocks */
+		// "no-invalid-regexp": "error",									/* disallow invalid regular expression strings in `RegExp` constructors */
+		// "no-irregular-whitespace": "error",						/* disallow irregular whitespace */
+		// "no-misleading-character-class": "error",			/* disallow characters which are made with multiple code points in character class syntax */
+		// "no-prototype-builtins": "error",							/* disallow calling some `Object.prototype` methods directly on objects */
+		// "no-regex-spaces": "error",										/* disallow multiple spaces in regular expressions */
+		// "no-sparse-arrays": "error",										/* disallow sparse arrays */
+		// "no-unexpected-multiline": "error",						/* disallow confusing multiline expressions */
+		// "no-unsafe-finally": "error",									/* disallow control flow statements in `finally` blocks */
+		// "use-isnan": "error",													/* require calls to `isNaN()` when checking for `NaN` */
+
+		/* typescript-eslint/eslint-recommended */
+		// "getter-return": "off",												/* enforce `return` statements in getters */
+		// "no-dupe-args": "off",													/* disallow duplicate arguments in `function` definitions */
+		// "no-dupe-keys": "off",													/* disallow duplicate keys in object literals */
+		// "no-func-assign": "off",												/* disallow reassigning `function` declarations */
+		// "no-import-assign": "off",											/* disallow assigning to imported bindings */
+		// "no-obj-calls": "off",													/* disallow calling global object properties as functions */
+		// "no-setter-return": "off",											/* disallow returning values from setters */
+		// "no-unreachable": "off",												/* disallow unreachable code after `return`, `throw`, `continue`, and `break` statements */
+		// "no-unsafe-negation": "off",										/* disallow negating the left operand of relational operators */
+		// "valid-typeof": "off",													/* enforce comparing `typeof` expressions against valid strings */
+
+		/* typescript-eslint/recommended */
+		// "no-extra-semi": "off",											/* disallow unnecessary semicolons */
+
+		"no-await-in-loop": "error",											/* disallow `await` inside of loops */
+		"no-console": "off",															/* disallow the use of `console` */
+		"no-extra-boolean-cast": [												/* disallow unnecessary boolean casts */
+			"error",
+			{ "enforceForLogicalOperands": true }
+		],
+		"no-extra-parens": [															/* disallow unnecessary parentheses */
+			"error",
+			"all",
+			{
+				"conditionalAssign": false,
+				"ignoreJSX": "multi-line",
+				"nestedBinaryExpressions": false,
+				"enforceForSequenceExpressions": false
+			}
+		],
+		"no-loss-of-precision": "error",									/* disallow literal numbers that lose precision */
+		"no-promise-executor-return": "error",						/* disallow returning values from Promise executor functions */
+		"no-template-curly-in-string": "error",						/* disallow template literal placeholder syntax in regular strings */
+		"no-unreachable-loop": "error",										/* disallow loops with a body that allows only one iteration */
+		"no-unsafe-optional-chaining": [									/* disallow use of optional chaining in contexts where the `undefined` value is not allowed */
+			"error",
+			{ "disallowArithmeticOperators": true }
+		],
+		"no-useless-backreference": "error",							/* disallow useless backreferences in regular expressions */
+		"require-atomic-updates": "error",								/* disallow assignments that can lead to race conditions due to usage of `await` or `yield` */
+
+		/*** Best Practices ***/
+
+		/* eslint:recommended */
+		// "no-case-declarations": "error",								/* disallow lexical declarations in case clauses */
+		// "no-empty-pattern": "error",										/* disallow empty destructuring patterns */
+		// "no-fallthrough": "error",											/* 	disallow fallthrough of `case` statements */
+		// "no-global-assign": "error",										/* disallow assignments to native objects or read-only global variables */
+		// "no-octal": "error",														/* disallow octal literals */
+		// "no-self-assign": "error",											/* disallow assignments where both sides are exactly the same */
+		// "no-unused-labels": "error",										/* disallow unused labels */
+		// "no-useless-catch": "error",										/* disallow unnecessary `catch` clauses */
+		// "no-useless-escape": "error",									/* disallow unnecessary escape characters */
+		// "no-with": "error",														/* disallow `with` statements */
+
+		/* typescript-eslint/eslint-recommended */
+		// "no-redeclare": "off",													/* disallow variable redeclaration */
+
+		/* typescript-eslint/recommended */
+		// "no-empty-function": "off",										/* disallow empty functions */
+
+		"accessor-pairs": "error",												/* enforce getter and setter pairs in objects and classes */
+		"array-callback-return": [												/* enforce `return` statements in callbacks of array methods */
+			"error",
+			{ "checkForEach": true }
+		],
+		"block-scoped-var": "error",											/* enforce the use of variables within the scope they are defined */
+		"class-methods-use-this": "error",								/* enforce that class methods utilize `this` */
+		"complexity": "warn",															/* enforce a maximum cyclomatic complexity allowed in a program */
+		"consistent-return": "error",											/* require `return` statements to either always or never specify values */
+		"curly": "error",																	/* enforce consistent brace style for all control statements */
+		"default-case": "error",													/* require `default` cases in `switch` statements */
+		"default-case-last": "error",											/* enforce default clauses in switch statements to be last */
+		"default-param-last": "error",										/* enforce default parameters to be last */
+		"dot-location": [																	/* enforce consistent newlines before and after dots */
+			"error",
+			"property"
+		],
+		"dot-notation": "error",													/* enforce dot notation whenever possible */
+		"eqeqeq": [																				/* require the use of `===` and `!==` */
+			"error",
+			"always"
+		],
+		"grouped-accessor-pairs": [												/* require grouped accessor pairs in object literals and classes */
+			"error",
+			"getBeforeSet"
+		],
+		"guard-for-in": "error",													/* require `for-in` loops to include an `if` statement */
+		"max-classes-per-file": "error",									/* enforce a maximum number of classes per file */
+		"no-alert": "off",																/* disallow the use of `alert`, `confirm`, and `prompt` */
+		"no-caller": "error",															/* disallow the use of `arguments.caller` or `arguments.callee` */
+		"no-constructor-return": "error",									/* disallow returning value from constructor */
+		"no-div-regex": "off",														/* disallow division operators explicitly at the beginning of regular expressions */
+		"no-else-return": "error",												/* disallow `else` blocks after `return` statements in `if` statements */
+		"no-eq-null": "error",														/* disallow `null` comparisons without type-checking operators */
+		"no-eval": "error",																/* disallow the use of `eval()`*/
+		"no-extend-native": "error",											/* disallow extending native types */
+		"no-extra-bind": "error",													/* disallow unnecessary calls to `.bind()` */
+		"no-extra-label": "error",												/* disallow unnecessary labels */
+		"no-floating-decimal": "error",										/* disallow leading or trailing decimal points in numeric literals */
+		"no-implicit-coercion": "error",									/* disallow shorthand type conversions */
+		"no-implicit-globals": "error",										/* disallow declarations in the global scope */
+		"no-implied-eval": "error",												/* disallow the use of `eval()`-like methods */
+		"no-invalid-this": "error",												/* disallow `this` keywords outside of classes or class-like objects */
+		"no-iterator": "error",														/* disallow the use of the `__iterator__` property */
+		"no-labels": "off",																/* disallow labeled statements */
+		"no-lone-blocks": "error",												/* disallow unnecessary nested blocks */
+		"no-loop-func": "error",													/* disallow function declarations that contain unsafe references inside loop statements */
+		"no-magic-numbers": "off",												/* disallow magic numbers */
+		"no-multi-spaces": "error",												/* disallow multiple spaces */
+		"no-multi-str": "error",													/* disallow multiline strings */
+		"no-new": "error",																/* disallow `new` operators outside of assignments or comparisons */
+		"no-new-func": "error",														/* disallow `new` operators with the `Function` object */
+		"no-new-wrappers": "error",												/* disallow `new` operators with the `String`, `Number`, and `Boolean` objects */
+		"no-nonoctal-decimal-escape": "error",						/* disallow `\8` and `\9` escape sequences in string literals */
+		"no-octal-escape": "error",												/* disallow octal escape sequences in string literals */
+		"no-param-reassign": "error",											/* disallow reassigning `function` parameters */
+		"no-proto": "error",															/* disallow the use of the `__proto__` property */
+		"no-restricted-properties": "off",								/* disallow certain properties on certain objects */
+		"no-return-assign": "error",											/* disallow assignment operators in `return` statements */
+		"no-return-await": "error",												/* disallow unnecessary `return await` */
+		"no-script-url": "error",													/* disallow `javascript:` urls */
+		"no-self-compare": "error",												/* disallow comparisons where both sides are exactly the same */
+		"no-sequences": "error",													/* disallow comma operators */
+		"no-throw-literal": "error",											/* disallow throwing literals as exceptions */
+		"no-unmodified-loop-condition": "error",					/* disallow unmodified loop conditions */
+		"no-unused-expressions": "error",									/* disallow unused expressions */
+		"no-useless-call": "error",												/* disallow unnecessary calls to `.call()` and `.apply()` */
+		"no-useless-concat": "error",											/* disallow unnecessary concatenation of literals or template literals */
+		"no-useless-return": "error",											/* disallow redundant return statements */
+		"no-void": "error",																/* disallow `void` operators */
+		"no-warning-comments": "off",											/* disallow specified warning terms in comments */
+		"prefer-named-capture-group": "off",							/* enforce using named capture group in regular expression */
+		"prefer-promise-reject-errors": "error",					/* require using Error objects as Promise rejection reasons */
+		"prefer-regex-literals": [												/* disallow use of the `RegExp` constructor in favor of regular expression literals */
+			"error",
+			{ "disallowRedundantWrapping": true }
+		],
+		"radix": [																				/* enforce the consistent use of the radix argument when using `parseInt()` */
+			"error",
+			"as-needed"
+		],
+		"require-await": "error",													/* disallow async functions which have no `await` expression */
+		"require-unicode-regexp": "error",								/* enforce the use of `u` flag on RegExp */
+		"vars-on-top": "error",														/* require `var` declarations be placed at the top of their containing scope */
+		"wrap-iife": [																		/* require parentheses around immediate `function` invocations */
+			"error",
+			"inside"
+		],
+		"yoda": "error",																	/* require or disallow "Yoda" conditions */
+
+		/*** Strict Mode ***/
+
+		"strict": ["error", "global"],
+
+		/*** Variables ***/
+
+		/* eslint:recommended */
+		// "no-delete-var": "error",											/* disallow deleting variables */
+		// "no-shadow-restricted-names": "error", 				/* disallow identifiers from shadowing restricted names */
+		// "no-unused-vars": "error",											/* disallow unused variables */
+
+		/* typescript-eslint/eslint-recommended */
+		// "no-undef": "off",															/* disallow the use of undeclared variables unless mentioned in `/*global */` comments */
+
+		"init-declarations": "off",												/* require or disallow initialization in variable declarations */
+		"no-label-var": "error",													/* disallow labels that share a name with a variable */
+		"no-restricted-globals": "off",										/* disallow specified global variables */
+		"no-shadow": [																		/* disallow variable declarations from shadowing variables declared in the outer scope */
+			"error",
+			{
+				"builtinGlobals": true,
+				"hoist": "all"
+			}
+		],
+		"no-undef-init": "off",														/* disallow initializing variables to `undefined` */
+		"no-undefined": "off",														/* disallow the use of `undefined` as an identifier */
+		"no-use-before-define": "off",										/* disallow the use of variables before they are defined */
+
+		/*** Stylistic Issues ***/
+
+		/* eslint:recommended */
+		// "no-mixed-spaces-and-tabs": "error",						/* disallow mixed spaces and tabs for indentation */
+
+		"array-bracket-newline": [												/* enforce linebreaks after opening and before closing array brackets */
+			"error",
+			{
+				"multiline": true
+			}
+		],
+		"array-bracket-spacing": [												/* enforce consistent spacing inside array brackets */
+			"error",
+			"always"
+		],
+		"array-element-newline": [												/* enforce line breaks after each array element */
+			"error",
+			{
+				"multiline": true,
+				"minItems": 3
+			}
+		],
+		"block-spacing": "error",													/* disallow or enforce spaces inside of blocks after opening block and before closing block */
+		"brace-style": [																	/* enforce consistent brace style for blocks */
+			"error",
+			"1tbs",
+			{ "allowSingleLine": true }
+		],
+		"camelcase": "error",															/* enforce camelcase naming convention */
+		"comma-dangle": [																	/* enforce or disallow capitalization of the first letter of a comment */
+			"error",
+			"never"
+		],
+		"comma-spacing": "error",													/* Enforces spacing around commas */
+		"comma-style": "error",														/* enforce consistent comma style */
+		"computed-property-spacing": [										/* enforce consistent spacing inside computed property brackets */
+			"error",
+			"always"
+		],
+		"consistent-this": "off",													/* enforce consistent naming when capturing the current execution context */
+		"eol-last": "error",															/* require or disallow newline at the end of files */
+		"func-call-spacing": "error",											/* require or disallow spacing between function identifiers and their invocations */
+		"func-name-matching": [														/* require function names to match the name of the variable or property to which they are assigned */
+			"error",
+			{
+				"considerPropertyDescriptor": true,
+				"includeCommonJSModuleExports": true
+			}
+		],
+		"func-names": "off",															/* require or disallow named `function` expressions */
+		"func-style": [																		/* enforce the consistent use of either `function` declarations or expressions */
+			"error",
+			"declaration",
+			{ "allowArrowFunctions": true }
+		],
+		"function-call-argument-newline": [								/* enforce line breaks between arguments of a function call */
+			"error",
+			"consistent"
+		],
+		"function-paren-newline": [												/* enforce consistent line breaks inside function parentheses */
+			"error",
+			"multiline-arguments"
+		],
+		"id-denylist": "off",															/* disallow specified identifiers */
+		"id-length": "off",																/* enforce minimum and maximum identifier lengths */
+		"id-match": "off",																/* require identifiers to match a specified regular expression */
+		"implicit-arrow-linebreak": "error",							/* enforce the location of arrow function bodies */
+		"indent": [																				/* enforce consistent indentation */
+			"error",
+			"tab",
+			{
+				"SwitchCase": 1,
+				"VariableDeclarator": { "var": 2, "let": 2, "const": 3 },
+				"offsetTernaryExpressions": true // doesn't seem to be working
+			}
+		],
+		"jsx-quotes": "error",														/* enforce the consistent use of either double or single quotes in JSX attributes */
+		"key-spacing": [																	/* enforce consistent spacing before and after keywords */
+			"error",
+			{ "mode": "strict" }
+		],
+		"keyword-spacing": "error",												/* enforce consistent spacing before and after keywords */
+		"line-comment-position": "off",										/* enforce position of line comments */
+		"linebreak-style": [															/* enforce consistent linebreak style */
+			"error",
+			"unix"
+		],
+		"lines-around-comment": [													/* require empty lines around comments */
+			"error",
+			{
+				"allowBlockStart": true,
+				"allowClassStart": true,
+				"allowObjectStart": true,
+				"allowArrayStart": true
+			}
+		],
+		"lines-between-class-members": "error",						/* require or disallow an empty line between class members */
+		"max-depth": "warn",															/* enforce a maximum depth that blocks can be nested */
+		"max-len": [																			/* enforce a maximum line length */
+			"error",
+			{ 
+				"ignoreUrls": true,
+				"ignoreStrings": true,
+				"ignoreTemplateLiterals": true,
+				"ignoreRegExpLiterals": true
+			}
+		],
+		"max-lines": "off",																/* enforce a maximum number of lines per file */
+		"max-lines-per-function": "off",									/* enforce a maximum number of lines of code in a function */
+		"max-nested-callbacks": "off",										/* enforce a maximum depth that callbacks can be nested */
+		"max-params": [																		/* enforce a maximum number of parameters in function definitions */
+			"error",
+			3
+		],
+		"max-statements": "off",													/*	enforce a maximum number of statements allowed in function blocks */
+		"max-statements-per-line": "error",								/* enforce a maximum number of statements allowed per line */
+		"multiline-comment-style": [											/* enforce a particular style for multiline comments */
+			"error",
+			"bare-block"
+		],
+		"multiline-ternary": [														/* enforce newlines between operands of ternary expressions */
+			"error",
+			"always-multiline"
+		],
+		"new-cap": "error",																/* require constructor names to begin with a capital letter */
+		"new-parens": "error",														/* enforce or disallow parentheses when invoking a constructor with no arguments */
+		"newline-per-chained-call": [											/* require a newline after each call in a method chain */
+			"error",
+			{ "ignoreChainWithDepth": 2 }
+		],
+		"no-array-constructor": "error",									/* disallow `Array` constructors */
+		"no-bitwise": "off",															/* disallow bitwise operators */
+		"no-continue": "off",															/* disallow `continue` statements */
+		"no-inline-comments": "off",											/* disallow inline comments after code */
+		"no-lonely-if": "error",													/* disallow `if` statements as the only statement in `else` blocks */
+		"no-mixed-operators": "error",										/* disallow mixed binary operators */
+		"no-multi-assign": "error",												/* disallow use of chained assignment expressions */
+		"no-multiple-empty-lines": [											/*  */
+			"error",
+			{ "max": 1, "maxBOF": 0 }
+		],
+		"no-trailing-spaces": "error",										/*  */
+		"no-unneeded-ternary": "error",										/*  */
+		"no-whitespace-before-property": "error",					/*  */
+		"nonblock-statement-body-position": "error",			/*  */
+		"object-curly-newline": [													/*  */
+			"error",
+			{ "multiline": true }
+		],
+		"object-curly-spacing": [													/*  */
+			"error",
+			"always"
+		],
+		"object-property-newline": [											/*  */
+			"error",
+			{ "allowAllPropertiesOnSameLine": true }
+		],
+		"one-var-declaration-per-line": [									/*  */
+			"error",
+			"always"
+		],
+		"operator-assignment": "error",										/*  */
+		"operator-linebreak": [														/*  */
+			"error",
+			"before"
+		],
+		"padded-blocks": [																/*  */
+			"error",
+			"never"
+		],
+		"padding-line-between-statements": [							/*  */
+			"error",
+			{
+				"blankLine":"always",
+				"prev": [ "const", "let", "var" ],
+				"next": "*" 
+			},
+			{
+				"blankLine": "any",
+				"prev": [ "const", "let", "var" ],
+				"next": [  "const", "let", "var" ]
+			},
+			{
+				"blankLine": "always",
+				"prev": [ "block", "block-like" ],
+				"next": "*"
+			},
+			{
+				"blankLine": "always",
+				"prev": "*",
+				"next": [ "class", "debugger", "do", "for", "function", "if", "iife", "return", "switch", "try", "while" ]
+			},
+			{
+				"blankLine": "always",
+				"prev": [ "cjs-import", "import" ],
+				"next": "*"
+			},
+			{
+				"blankLine": "any",
+				"prev": [ "cjs-import", "import" ],
+				"next": [ "cjs-import", "import" ]
+			},
+			{
+				"blankLine": "always",
+				"prev": "*",
+				"next": [ "cjs-export", "export" ]
+			},
+			{
+				"blankLine": "always",
+				"prev": "directive",
+				"next": "*"
+			},
+			{
+				"blankLine": "any",
+				"prev": "directive",
+				"next": "directive"
+			}
+		],
+		"quote-props": [												          /*  */
+			"error",
+			"as-needed"
+		],
+		"quotes": [												          			/*  */
+			"error",
+			"single"
+		],
+		"semi": [												          				/*  */
+			"error",
+			"always",
+			{ "omitLastInOneLineBlock": true }
+		],
+		"semi-spacing": "error",												  /*  */
+		"semi-style": "error",												  	/*  */
+		"space-before-blocks": "error",										/*  */
+		"space-before-function-paren": [									/*  */
+			"error",
+			{
+				"anonymous": "never",
+				"named": "never",
+				"asyncArrow": "always"
+			}
+		],
+		"space-in-parens": [												  		/*  */
+			"error",
+			"always"
+		],
+		"space-infix-ops": "error",												/*  */
+		"space-unary-ops": "error",												/*  */
+		"spaced-comment": [												  			/*  */
+			"error",
+			"always"
+		],
+		"switch-colon-spacing": "error",									/*  */
+		"template-tag-spacing": "error",									/*  */
+
+		/*** es6 ***/
+
+		"arrow-parens": [
+			"error",
+			"as-needed"
+		],
+		"arrow-spacing": "error",
+		"no-duplicate-imports": [
+			"error",
+			{ "includeExports": true }
+		],
+		"no-useless-computed-key": "error",
+		"no-useless-rename": "error",
+		"object-shorthand": "error",
+		"prefer-arrow-callback": [
+			"error",
+			{ 
+					"allowNamedFunctions": true,
+					"allowUnboundThis": true 
+			}
+		],
+		"prefer-destructuring": [
+			"error",
+			{
+					"array": true,
+					"object": true
+			},
+			{ "enforceForRenamedProperties": false }
+		],
+		"prefer-template": "error",
+		"rest-spread-spacing": "error",
+		"template-curly-spacing": [
+			"error",
+			"always"
+		]
+	}
+}
