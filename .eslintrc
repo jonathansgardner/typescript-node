@@ -323,7 +323,7 @@
 		"max-depth": "warn",															/* enforce a maximum depth that blocks can be nested */
 		"max-len": [																			/* enforce a maximum line length */
 			"error",
-			{ 
+			{
 				"ignoreUrls": true,
 				"ignoreStrings": true,
 				"ignoreTemplateLiterals": true,
@@ -425,7 +425,7 @@
 					"let",
 					"var"
 				],
-				"next": "*" 
+				"next": "*"
 			},
 			{ // ignore consecutive variables
 				"blankLine": "any",
@@ -603,9 +603,9 @@
 		"object-shorthand": "error",
 		"prefer-arrow-callback": [
 			"error",
-			{ 
+			{
 					"allowNamedFunctions": true,
-					"allowUnboundThis": true 
+					"allowUnboundThis": true
 			}
 		],
 		"prefer-destructuring": [
