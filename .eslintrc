@@ -550,23 +550,31 @@
 		],
 		"prefer-exponentiation-operator": "error",				/* disallow the use of `Math.pow` in favor of the `**` operator */
 		"prefer-object-spread": "error",									/* disallow using Object.assign with an object literal as the first argument and prefer the use of object spread instead. */
-		"quote-props": [												          /*  */
+		"quote-props": [												          /* require quotes around object literal property names */
 			"error",
-			"as-needed"
+			"as-needed",
+			{ "numbers": true }
 		],
-		"quotes": [												          			/*  */
+		"quotes": [												          			/* enforce the consistent use of either backticks, double, or single quotes */
 			"error",
-			"single"
+			"single",
+			{ "avoidEscape": true }
 		],
-		"semi": [												          				/*  */
+		"semi": [												          				/* require or disallow semicolons instead of ASI */
 			"error",
 			"always",
 			{ "omitLastInOneLineBlock": true }
 		],
-		"semi-spacing": "error",												  /*  */
-		"semi-style": "error",												  	/*  */
-		"space-before-blocks": "error",										/*  */
-		"space-before-function-paren": [									/*  */
+		"semi-spacing": "error",												  /* enforce consistent spacing before and after semicolons */
+		"semi-style": "error",												  	/* enforce location of semicolons */
+		"sort-keys": [																		/* 	require object keys to be sorted */
+			"error",
+			"asc",
+			{ "natural": true }
+		],
+		"sort-vars": "error",															/* require variables within the same declaration block to be sorted */
+		"space-before-blocks": "error",										/* enforce consistent spacing before blocks */
+		"space-before-function-paren": [									/* 	enforce consistent spacing before `function` definition opening parenthesis */
 			"error",
 			{
 				"anonymous": "never",
@@ -574,41 +582,58 @@
 				"asyncArrow": "always"
 			}
 		],
-		"space-in-parens": [												  		/*  */
+		"space-in-parens": [												  		/* enforce consistent spacing inside parentheses */
 			"error",
 			"always"
 		],
-		"space-infix-ops": "error",												/*  */
-		"space-unary-ops": "error",												/*  */
-		"spaced-comment": [												  			/*  */
+		"space-infix-ops": "error",												/* require spacing around infix operators */
+		"space-unary-ops": "error",												/* enforce consistent spacing before or after unary operators */
+		"spaced-comment": [												  			/* enforce consistent spacing after the `//` or `/*` in a comment */
 			"error",
 			"always"
 		],
-		"switch-colon-spacing": "error",									/*  */
-		"template-tag-spacing": "error",									/*  */
+		"switch-colon-spacing": "error",									/* enforce spacing around colons of switch statements */
+		"template-tag-spacing": "error",									/* require or disallow spacing between template tags and their literals */
+		"unicode-bom": "off",															/* require or disallow Unicode byte order mark (BOM) */
+		"wrap-regex": "error",														/* require parenthesis around regex literals */
 
 		/*** es6 ***/
 
-		"arrow-parens": [
+		/* eslint:recommended */
+		// "constructor-super": "error",									/* require `super()` calls in constructors */
+		// "no-class-assign": "error",										/* disallow reassigning class members */
+		// "no-const-assign": "error",										/* disallow reassigning `const` variables */
+		// "no-dupe-class-members": "error",							/* 	disallow duplicate class members */
+
+		"arrow-body-style": "error",											/* require braces around arrow function bodies */
+		"arrow-parens": [																	/* require parentheses around arrow function arguments */
 			"error",
 			"as-needed"
 		],
-		"arrow-spacing": "error",
-		"no-duplicate-imports": [
+		"arrow-spacing": "error",													/* enforce consistent spacing before and after the arrow in arrow functions */
+		"generator-star-spacing": [												/* enforce consistent spacing around `*` operators in generator functions */
+			"error",
+			{
+				"before": false,
+				"after": true
+				}
+		],
+		"no-confusing-arrow": "off",											/* disallow arrow functions where they could be confused with comparisons */
+		"no-duplicate-imports": [													/*  */
 			"error",
 			{ "includeExports": true }
 		],
-		"no-useless-computed-key": "error",
-		"no-useless-rename": "error",
-		"object-shorthand": "error",
-		"prefer-arrow-callback": [
+		"no-useless-computed-key": "error",								/*  */
+		"no-useless-rename": "error",											/*  */
+		"object-shorthand": "error",											/*  */
+		"prefer-arrow-callback": [												/*  */
 			"error",
 			{
 					"allowNamedFunctions": true,
 					"allowUnboundThis": true
 			}
 		],
-		"prefer-destructuring": [
+		"prefer-destructuring": [													/*  */
 			"error",
 			{
 					"array": true,
@@ -616,9 +641,9 @@
 			},
 			{ "enforceForRenamedProperties": false }
 		],
-		"prefer-template": "error",
-		"rest-spread-spacing": "error",
-		"template-curly-spacing": [
+		"prefer-template": "error",												/*  */
+		"rest-spread-spacing": "error",										/*  */
+		"template-curly-spacing": [												/*  */
 			"error",
 			"always"
 		]

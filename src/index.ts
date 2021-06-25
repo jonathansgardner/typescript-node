@@ -1,4 +1,5 @@
 // consecutive variables
+const d = 5;
 const a = 2,
 			b = 1,
 			c = 3;
@@ -7,7 +8,15 @@ let v = 5;
 v += 3;
 v **= 3;
 
+console.log( a, b, c, d );
 console.log( v );
+
+const obj = {
+	'1': 'one',
+	test: 'testing'
+};
+
+console.log( obj );
 
 // iife
 ( function( arg1: string, arg2: number, arg3: boolean ): void {
@@ -48,8 +57,6 @@ console.log( testBool );
 
 arr.reverse()
 	.sort();
-
-console.log( a, b, c );
 
 class TestClass {
 	greeting: string
