@@ -5,6 +5,7 @@ const a = 2,
 let v = 5;
 
 v += 3;
+v **= 3;
 
 console.log( v );
 
