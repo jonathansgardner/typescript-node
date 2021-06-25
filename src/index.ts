@@ -18,6 +18,16 @@ const obj = {
 
 console.log( obj );
 
+function* other() {
+	yield 2;
+}
+
+function* generator() {
+	yield* other();
+}
+
+generator();
+
 // iife
 ( function( arg1: string, arg2: number, arg3: boolean ): void {
 	console.log( arg1, arg2, arg3 );

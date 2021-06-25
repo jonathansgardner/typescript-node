@@ -1,0 +1,111 @@
+{
+	"rules": {
+		/* eslint:recommended */
+		// "no-case-declarations": "error",								/* disallow lexical declarations in case clauses */
+		// "no-empty-pattern": "error",										/* disallow empty destructuring patterns */
+		// "no-fallthrough": "error",											/* 	disallow fallthrough of `case` statements */
+		// "no-global-assign": "error",										/* disallow assignments to native objects or read-only global variables */
+		// "no-octal": "error",														/* disallow octal literals */
+		// "no-self-assign": "error",											/* disallow assignments where both sides are exactly the same */
+		// "no-unused-labels": "error",										/* disallow unused labels */
+		// "no-useless-catch": "error",										/* disallow unnecessary `catch` clauses */
+		// "no-useless-escape": "error",									/* disallow unnecessary escape characters */
+		// "no-with": "error",														/* disallow `with` statements */
+
+		/* typescript-eslint/eslint-recommended */
+		// "no-redeclare": "off",													/* disallow variable redeclaration */
+
+		/* typescript-eslint/recommended */
+		// "no-empty-function": "off",										/* disallow empty functions */
+
+		"accessor-pairs": "error",												/* enforce getter and setter pairs in objects and classes */
+		"array-callback-return": [												/* enforce `return` statements in callbacks of array methods */
+			"error",
+			{ "checkForEach": true }
+		],
+		"block-scoped-var": "error",											/* enforce the use of variables within the scope they are defined */
+		"class-methods-use-this": "error",								/* enforce that class methods utilize `this` */
+		"complexity": "warn",															/* enforce a maximum cyclomatic complexity allowed in a program */
+		"consistent-return": "error",											/* require `return` statements to either always or never specify values */
+		"curly": "error",																	/* enforce consistent brace style for all control statements */
+		"default-case": "error",													/* require `default` cases in `switch` statements */
+		"default-case-last": "error",											/* enforce default clauses in switch statements to be last */
+		"default-param-last": "error",										/* enforce default parameters to be last */
+		"dot-location": [																	/* enforce consistent newlines before and after dots */
+			"error",
+			"property"
+		],
+		"dot-notation": "error",													/* enforce dot notation whenever possible */
+		"eqeqeq": [																				/* require the use of `===` and `!==` */
+			"error",
+			"always"
+		],
+		"grouped-accessor-pairs": [												/* require grouped accessor pairs in object literals and classes */
+			"error",
+			"getBeforeSet"
+		],
+		"guard-for-in": "error",													/* require `for-in` loops to include an `if` statement */
+		"max-classes-per-file": "error",									/* enforce a maximum number of classes per file */
+		"no-alert": "off",																/* disallow the use of `alert`, `confirm`, and `prompt` */
+		"no-caller": "error",															/* disallow the use of `arguments.caller` or `arguments.callee` */
+		"no-constructor-return": "error",									/* disallow returning value from constructor */
+		"no-div-regex": "off",														/* disallow division operators explicitly at the beginning of regular expressions */
+		"no-else-return": "error",												/* disallow `else` blocks after `return` statements in `if` statements */
+		"no-eq-null": "error",														/* disallow `null` comparisons without type-checking operators */
+		"no-eval": "error",																/* disallow the use of `eval()`*/
+		"no-extend-native": "error",											/* disallow extending native types */
+		"no-extra-bind": "error",													/* disallow unnecessary calls to `.bind()` */
+		"no-extra-label": "error",												/* disallow unnecessary labels */
+		"no-floating-decimal": "error",										/* disallow leading or trailing decimal points in numeric literals */
+		"no-implicit-coercion": "error",									/* disallow shorthand type conversions */
+		"no-implicit-globals": "error",										/* disallow declarations in the global scope */
+		"no-implied-eval": "error",												/* disallow the use of `eval()`-like methods */
+		"no-invalid-this": "error",												/* disallow `this` keywords outside of classes or class-like objects */
+		"no-iterator": "error",														/* disallow the use of the `__iterator__` property */
+		"no-labels": "off",																/* disallow labeled statements */
+		"no-lone-blocks": "error",												/* disallow unnecessary nested blocks */
+		"no-loop-func": "error",													/* disallow function declarations that contain unsafe references inside loop statements */
+		"no-magic-numbers": "off",												/* disallow magic numbers */
+		"no-multi-spaces": "error",												/* disallow multiple spaces */
+		"no-multi-str": "error",													/* disallow multiline strings */
+		"no-new": "error",																/* disallow `new` operators outside of assignments or comparisons */
+		"no-new-func": "error",														/* disallow `new` operators with the `Function` object */
+		"no-new-wrappers": "error",												/* disallow `new` operators with the `String`, `Number`, and `Boolean` objects */
+		"no-nonoctal-decimal-escape": "error",						/* disallow `\8` and `\9` escape sequences in string literals */
+		"no-octal-escape": "error",												/* disallow octal escape sequences in string literals */
+		"no-param-reassign": "error",											/* disallow reassigning `function` parameters */
+		"no-proto": "error",															/* disallow the use of the `__proto__` property */
+		"no-restricted-properties": "off",								/* disallow certain properties on certain objects */
+		"no-return-assign": "error",											/* disallow assignment operators in `return` statements */
+		"no-return-await": "error",												/* disallow unnecessary `return await` */
+		"no-script-url": "error",													/* disallow `javascript:` urls */
+		"no-self-compare": "error",												/* disallow comparisons where both sides are exactly the same */
+		"no-sequences": "error",													/* disallow comma operators */
+		"no-throw-literal": "error",											/* disallow throwing literals as exceptions */
+		"no-unmodified-loop-condition": "error",					/* disallow unmodified loop conditions */
+		"no-unused-expressions": "error",									/* disallow unused expressions */
+		"no-useless-call": "error",												/* disallow unnecessary calls to `.call()` and `.apply()` */
+		"no-useless-concat": "error",											/* disallow unnecessary concatenation of literals or template literals */
+		"no-useless-return": "error",											/* disallow redundant return statements */
+		"no-void": "error",																/* disallow `void` operators */
+		"no-warning-comments": "off",											/* disallow specified warning terms in comments */
+		"prefer-named-capture-group": "off",							/* enforce using named capture group in regular expression */
+		"prefer-promise-reject-errors": "error",					/* require using Error objects as Promise rejection reasons */
+		"prefer-regex-literals": [												/* disallow use of the `RegExp` constructor in favor of regular expression literals */
+			"error",
+			{ "disallowRedundantWrapping": true }
+		],
+		"radix": [																				/* enforce the consistent use of the radix argument when using `parseInt()` */
+			"error",
+			"as-needed"
+		],
+		"require-await": "error",													/* disallow async functions which have no `await` expression */
+		"require-unicode-regexp": "error",								/* enforce the use of `u` flag on RegExp */
+		"vars-on-top": "error",														/* require `var` declarations be placed at the top of their containing scope */
+		"wrap-iife": [																		/* require parentheses around immediate `function` invocations */
+			"error",
+			"inside"
+		],
+		"yoda": "error"																		/* require or disallow "Yoda" conditions */
+	}
+}

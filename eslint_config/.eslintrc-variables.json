@@ -1,0 +1,27 @@
+{
+	"rules": {
+		/* eslint:recommended */
+		// "no-delete-var": "error",											/* disallow deleting variables */
+		// "no-shadow-restricted-names": "error", 				/* disallow identifiers from shadowing restricted names */
+
+		/* typescript-eslint/eslint-recommended */
+		// "no-undef": "off",															/* disallow the use of undeclared variables unless mentioned in `/*global */` comments */
+
+		/* typescript-eslint/recommended */
+		// "no-unused-vars": "off",												/* disallow unused variables */
+
+		"init-declarations": "off",												/* require or disallow initialization in variable declarations */
+		"no-label-var": "error",													/* disallow labels that share a name with a variable */
+		"no-restricted-globals": "off",										/* disallow specified global variables */
+		"no-shadow": [																		/* disallow variable declarations from shadowing variables declared in the outer scope */
+			"error",
+			{
+				"builtinGlobals": true,
+				"hoist": "all"
+			}
+		],
+		"no-undef-init": "off",														/* disallow initializing variables to `undefined` */
+		"no-undefined": "off",														/* disallow the use of `undefined` as an identifier */
+		"no-use-before-define": "off"											/* disallow the use of variables before they are defined */
+	}
+}
