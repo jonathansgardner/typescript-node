@@ -13,22 +13,23 @@
 		"eslint:recommended", // https://github.com/eslint/eslint/blob/master/conf/eslint-recommended.js
 		"plugin:@typescript-eslint/eslint-recommended", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/src/configs/eslint-recommended.ts
 		"plugin:@typescript-eslint/recommended", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/src/configs/recommended.ts
-		"./eslint_config/.eslintrc-possible-errors.json",
-		"./eslint_config/.eslintrc-best-practices.json",
-		"./eslint_config/.eslintrc-strict-mode.json",
-		"./eslint_config/.eslintrc-variables.json",
-		"./eslint_config/.eslintrc-stylistic-issues.json",
-		"./eslint_config/.eslintrc-es6.json"
+		"./eslint_config/.eslintrc-possible-errors.jsonc",
+		"./eslint_config/.eslintrc-best-practices.jsonc",
+		"./eslint_config/.eslintrc-strict-mode.jsonc",
+		"./eslint_config/.eslintrc-variables.jsonc",
+		"./eslint_config/.eslintrc-stylistic-issues.jsonc",
+		"./eslint_config/.eslintrc-es6.jsonc"
 	],
 	"rules": {
-
 		/*** typescript-eslint ***/
-		"@typescript-eslint/adjacent-overload-signatures": "off",
+
+		/* typescript-eslint:recommended */
+		// "@typescript-eslint/adjacent-overload-signatures": "error",
 		"@tyepscript-eslint/array-type": "off",
 		"@tyepscript-eslint/await-thenable": "off",
-		"@typescript-eslint/ban-ts-comment": "off",
+		// "@typescript-eslint/ban-ts-comment": "error",
 		"@typescript-eslint/ban-tslint-comment": "off",
-		"@typescript-eslint/ban-types": "off",
+		// "@typescript-eslint/ban-types": "error",
 		"@typescript-eslint/class-literal-property-style": "off",
 		"@typescript-eslint/consistent-indexed-object-style": "off",
 		"@typescript-eslint/consistent-type-assertions": "off",
