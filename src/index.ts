@@ -69,7 +69,7 @@ arr.reverse()
 	.sort();
 
 class TestClass {
-	greeting: string
+	readonly greeting: string
 
 	constructor( greeting : string ) {
 		this.greeting = greeting;
