@@ -8,6 +8,11 @@ let v = 5;
 v += 3;
 v **= 3;
 
+// interface keyword
+interface T1 {
+  greeting: string;
+}
+
 console.log( a, b, c, d );
 console.log( v );
 
@@ -18,11 +23,11 @@ const obj = {
 
 console.log( obj );
 
-function* other() {
+function* other() : Generator<number> {
 	yield 2;
 }
 
-function* generator() {
+function* generator() : Generator<number> {
 	yield* other();
 }
 
@@ -35,15 +40,11 @@ generator();
 	// function declaration
 	function print(
 		message: string
-	) {
+	) : ( string | null ) {
 		return message
-			? console.log(
-				message + 1
-			)
+			? message + 1
 			: message.length > 2
-				? console.log(
-					message + 2
-				)
+				? message + 2
 				: null;
 	}
 
@@ -68,7 +69,7 @@ console.log( testBool );
 arr.reverse()
 	.sort();
 
-class TestClass {
+class TestClass implements T1 {
 	readonly greeting: string
 
 	constructor( greeting : string ) {
@@ -84,7 +85,7 @@ class TestClass {
 	}
 }
 
-console.log( new TestClass( 'hi' ).print() );
+new TestClass( 'hi' ).print();
 
 switch ( v ) {
 	case 1:

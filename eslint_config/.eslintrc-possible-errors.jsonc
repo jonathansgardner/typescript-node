@@ -2,42 +2,38 @@
 	"rules": {
 		/* eslint:recommended */
 		// "for-direction": "error",											/* enforce "for" loop update clause moving the counter in the right direction. */
+		// "getter-return": "error",											/* enforce `return` statements in getters */
 		// "no-async-promise-executor": "error",					/* disallow using an async function as a Promise executor */
 		// "no-compare-neg-zero": "error",								/* disallow comparing against -0 */
 		// "no-cond-assign": "error",											/* disallow assignment operators in conditional expressions */
 		// "no-constant-condition": "error",							/* disallow constant expressions in conditions */
 		// "no-control-regex": "error",										/* disallow control characters in regular expressions */
 		// "no-debugger": "error",												/* disallow the use of `debugger` */
+		// "no-dupe-args": "error",												/* disallow duplicate arguments in `function` definitions */
 		// "no-dupe-else-if": "error",										/* disallow duplicate conditions in if-else-if chains */
+		// "no-dupe-keys": "error",												/* disallow duplicate keys in object literals */
 		// "no-duplicate-case": "error",									/* disallow duplicate case labels */
 		// "no-empty": "error",														/* disallow empty block statements */
 		// "no-empty-character-class": "error",						/* disallow empty character classes in regular expressions */
 		// "no-ex-assign": "error",												/* disallow reassigning exceptions in `catch` clauses */
+		// "no-extra-semi": "error",											/* disallow unnecessary semicolons */
+		// "no-func-assign": "error",											/* disallow reassigning `function` declarations */
 		// "no-inner-declarations": "error",							/* disallow variable or `function` declarations in nested blocks */
 		// "no-invalid-regexp": "error",									/* disallow invalid regular expression strings in `RegExp` constructors */
+		// "no-import-assign": "error",										/* disallow assigning to imported bindings */
 		// "no-irregular-whitespace": "error",						/* disallow irregular whitespace */
 		// "no-misleading-character-class": "error",			/* disallow characters which are made with multiple code points in character class syntax */
+		// "no-obj-calls": "error",												/* disallow calling global object properties as functions */
 		// "no-prototype-builtins": "error",							/* disallow calling some `Object.prototype` methods directly on objects */
 		// "no-regex-spaces": "error",										/* disallow multiple spaces in regular expressions */
+		// "no-setter-return": "error",										/* disallow returning values from setters */
 		// "no-sparse-arrays": "error",										/* disallow sparse arrays */
 		// "no-unexpected-multiline": "error",						/* disallow confusing multiline expressions */
+		// "no-unreachable": "error",											/* disallow unreachable code after `return`, `throw`, `continue`, and `break` statements */
 		// "no-unsafe-finally": "error",									/* disallow control flow statements in `finally` blocks */
+		// "no-unsafe-negation": "error",									/* disallow negating the left operand of relational operators */
 		// "use-isnan": "error",													/* require calls to `isNaN()` when checking for `NaN` */
-
-		/* typescript-eslint/eslint-recommended */
-		// "getter-return": "off",												/* enforce `return` statements in getters */
-		// "no-dupe-args": "off",													/* disallow duplicate arguments in `function` definitions */
-		// "no-dupe-keys": "off",													/* disallow duplicate keys in object literals */
-		// "no-func-assign": "off",												/* disallow reassigning `function` declarations */
-		// "no-import-assign": "off",											/* disallow assigning to imported bindings */
-		// "no-obj-calls": "off",													/* disallow calling global object properties as functions */
-		// "no-setter-return": "off",											/* disallow returning values from setters */
-		// "no-unreachable": "off",												/* disallow unreachable code after `return`, `throw`, `continue`, and `break` statements */
-		// "no-unsafe-negation": "off",										/* disallow negating the left operand of relational operators */
-		// "valid-typeof": "off",													/* enforce comparing `typeof` expressions against valid strings */
-
-		/* typescript-eslint/recommended */
-		// "no-extra-semi": "off",											/* disallow unnecessary semicolons */
+		// "valid-typeof": "error",												/* enforce comparing `typeof` expressions against valid strings */
 
 		"no-await-in-loop": "error",											/* disallow `await` inside of loops */
 		"no-console": "off",															/* disallow the use of `console` */

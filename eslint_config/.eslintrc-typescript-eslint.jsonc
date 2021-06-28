@@ -31,9 +31,9 @@
 				"objectLiteralTypeAssertions": "allow-as-parameter"
 			}
 		],
-		"@typescript-eslint/consistent-type-definitions": "off",												/* Consistent with type definition either interface or type */
-		"@typescript-eslint/consistent-type-imports": "off",														/* Enforces consistent usage of type imports */
-		"@typescript-eslint/explicit-function-return-type": "off",											/* Require explicit return types on functions and class methods */
+		"@typescript-eslint/consistent-type-definitions": "error",											/* Consistent with type definition either interface or type */
+		"@typescript-eslint/consistent-type-imports": "error",													/* Enforces consistent usage of type imports */
+		"@typescript-eslint/explicit-function-return-type": "error",										/* Require explicit return types on functions and class methods */
 		"@typescript-eslint/explicit-member-accessibility": "off",											/* Require explicit accessibility modifiers on class properties and methods */
 		"@typescript-eslint/member-delimiter-style": "off",															/* Require a specific member delimiter style for interfaces and type literals */
 		"@typescript-eslint/member-ordering": "off",																		/* Require a consistent member declaration order */

@@ -1,20 +1,13 @@
 {
 	"rules": {
 		/* eslint:recommended */
+		// "constructor-super": "error",										/* require `super()` calls in constructors */
 		// "no-class-assign": "error",										/* disallow reassigning class members */
+		// "no-const-assign": "error",											/* disallow reassigning `const` variables */
+		// "no-dupe-class-members": "error",								/* disallow duplicate class members */
+		// "no-new-symbol": "error",												/* disallow `new` operators with the `Symbol` object */
 		// "no-this-before-super": "error",								/* disallow `this`/`super` before calling `super()` in constructors */
 		// "require-yield": "error",											/* require generator functions to contain `yield` */
-
-		/* typescript-eslint/eslint-recommended */
-		// "constructor-super": "off",										/* require `super()` calls in constructors */
-		// "no-const-assign": "off",											/* disallow reassigning `const` variables */
-		// "no-dupe-class-members": "off",								/* disallow duplicate class members */
-		// "no-new-symbol": "off",												/* disallow `new` operators with the `Symbol` object */
-		// "no-this-before-super": "off",									/* disallow `this`/`super` before calling `super()` in constructors */
-		// "no-var": "error",															/* require `let` or `const` instead of `var` */
-		// "prefer-const": "error",												/* require `const` declarations for variables that are never reassigned after declared */
-		// "prefer-rest-params": "error",									/* require rest parameters instead of `arguments` */
-		// "prefer-spread": "error",											/* require spread operators instead of `.apply()` */
 
 		"arrow-body-style": "error",											/* require braces around arrow function bodies */
 		"arrow-parens": [																	/* require parentheses around arrow function arguments */
@@ -42,8 +35,10 @@
 		],
 		"no-useless-constructor": "warn",									/* disallow unnecessary constructors */
 		"no-useless-rename": "error",											/* disallow renaming import, export, and destructured assignments to the same name */
+		"no-var": "error",																/* require `let` or `const` instead of `var` */
 		"object-shorthand": "error",											/* require or disallow method and property shorthand syntax for object literals */
 		"prefer-arrow-callback": "error",									/* require using arrow functions for callbacks */
+		"prefer-const": "error",													/* require `const` declarations for variables that are never reassigned after declared */
 		"prefer-destructuring": [													/* require destructuring from arrays and/or objects */
 			"error",
 			{
@@ -53,6 +48,8 @@
 			{ "enforceForRenamedProperties": false }
 		],
 		"prefer-numeric-literals": "error",								/* disallow `parseInt()` and `Number.parseInt()` in favor of binary, octal, and hexadecimal literals */
+		"prefer-rest-params": "error",										/* require rest parameters instead of `arguments` */
+		"prefer-spread": "error",													/* require spread operators instead of `.apply()` */
 		"prefer-template": "error",												/* require template literals instead of string concatenation */
 		"rest-spread-spacing": "error",										/* enforce spacing between rest and spread operators and their expressions */
 		"sort-imports": [																	/* enforce sorted import declarations within modules */

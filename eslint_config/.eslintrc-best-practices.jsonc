@@ -6,17 +6,12 @@
 		// "no-fallthrough": "error",											/* 	disallow fallthrough of `case` statements */
 		// "no-global-assign": "error",										/* disallow assignments to native objects or read-only global variables */
 		// "no-octal": "error",														/* disallow octal literals */
+		// "no-redeclare": "error",												/* disallow variable redeclaration */
 		// "no-self-assign": "error",											/* disallow assignments where both sides are exactly the same */
 		// "no-unused-labels": "error",										/* disallow unused labels */
 		// "no-useless-catch": "error",										/* disallow unnecessary `catch` clauses */
 		// "no-useless-escape": "error",									/* disallow unnecessary escape characters */
 		// "no-with": "error",														/* disallow `with` statements */
-
-		/* typescript-eslint/eslint-recommended */
-		// "no-redeclare": "off",													/* disallow variable redeclaration */
-
-		/* typescript-eslint/recommended */
-		// "no-empty-function": "off",										/* disallow empty functions */
 
 		"accessor-pairs": "error",												/* enforce getter and setter pairs in objects and classes */
 		"array-callback-return": [												/* enforce `return` statements in callbacks of array methods */
@@ -51,6 +46,7 @@
 		"no-constructor-return": "error",									/* disallow returning value from constructor */
 		"no-div-regex": "off",														/* disallow division operators explicitly at the beginning of regular expressions */
 		"no-else-return": "error",												/* disallow `else` blocks after `return` statements in `if` statements */
+		"no-empty-function": "error",											/* disallow empty functions */
 		"no-eq-null": "error",														/* disallow `null` comparisons without type-checking operators */
 		"no-eval": "error",																/* disallow the use of `eval()`*/
 		"no-extend-native": "error",											/* disallow extending native types */

@@ -11,17 +11,57 @@
 	],
 	"extends": [
 		"eslint:recommended", // https://github.com/eslint/eslint/blob/master/conf/eslint-recommended.js
-		"plugin:@typescript-eslint/eslint-recommended", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/src/configs/eslint-recommended.ts
-		"plugin:@typescript-eslint/recommended", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/src/configs/recommended.ts
 		"./eslint_config/.eslintrc-possible-errors.jsonc",
 		"./eslint_config/.eslintrc-best-practices.jsonc",
 		"./eslint_config/.eslintrc-strict-mode.jsonc",
 		"./eslint_config/.eslintrc-variables.jsonc",
 		"./eslint_config/.eslintrc-stylistic-issues.jsonc",
-		"./eslint_config/.eslintrc-es6.jsonc",
-		"./eslint_config/.eslintrc-typescript-eslint.jsonc"
+		"./eslint_config/.eslintrc-es6.jsonc"
 	],
 	"rules": {
 
-	}
+	},
+	"overrides": [
+		{
+			"files": [
+				"*.ts",
+				"*.tsx"
+			],
+			"extends": [
+				"plugin:@typescript-eslint/eslint-recommended", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/src/configs/eslint-recommended.ts
+				"plugin:@typescript-eslint/recommended", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/src/configs/recommended.ts
+				"./eslint_config/.eslintrc-typescript-eslint.jsonc"
+			],
+			"rules": {
+				/* typescript-eslint/eslint-recommended */
+				// "constructor-super": "off",										/* require `super()` calls in constructors */
+				// "getter-return": "off",												/* enforce `return` statements in getters */
+				// "no-const-assign": "off",											/* disallow reassigning `const` variables */
+				// "no-dupe-args": "off",													/* disallow duplicate arguments in `function` definitions */
+				// "no-dupe-class-members": "off",								/* disallow duplicate class members */
+				// "no-dupe-keys": "off",													/* disallow duplicate keys in object literals */
+				// "no-func-assign": "off",												/* disallow reassigning `function` declarations */
+				// "no-import-assign": "off",											/* disallow assigning to imported bindings */
+				// "no-new-symbol": "off",												/* disallow `new` operators with the `Symbol` object */
+				// "no-obj-calls": "off",													/* disallow calling global object properties as functions */
+				// "no-redeclare": "off",													/* disallow variable redeclaration */
+				// "no-setter-return": "off",											/* disallow returning values from setters */
+				// "no-this-before-super": "off",									/* disallow `this`/`super` before calling `super()` in constructors */
+				// "no-undef": "off",															/* disallow the use of undeclared variables unless mentioned in `/*global */` comments */
+				// "no-unreachable": "off",												/* disallow unreachable code after `return`, `throw`, `continue`, and `break` statements */
+				// "no-unsafe-negation": "off",										/* disallow negating the left operand of relational operators */
+				// "no-var": "error",															/* require `let` or `const` instead of `var` */
+				// "prefer-const": "error",												/* require `const` declarations for variables that are never reassigned after declared */
+				// "prefer-rest-params": "error",									/* require rest parameters instead of `arguments` */
+				// "prefer-spread": "error",											/* require spread operators instead of `.apply()` */
+				// "valid-typeof": "off",													/* enforce comparing `typeof` expressions against valid strings */
+
+				/* typescript-eslint/recommended */
+				// "no-array-constructor": "off",									/* disallow `Array` constructors */
+				// "no-empty-function": "off",										/* disallow empty functions */
+				// "no-extra-semi": "off",												/* disallow unnecessary semicolons */
+				// "no-unused-vars": "off",												/* disallow unused variables */
+			}
+		}
+	]
 }
