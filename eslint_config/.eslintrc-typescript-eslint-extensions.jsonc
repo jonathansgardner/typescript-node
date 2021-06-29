@@ -1,0 +1,45 @@
+{
+	"rules": {
+		/* typescript-eslint:recommended */
+		// "@typescript-eslint/adjacent-overload-signatures": "error",									/* Require that member overloads be consecutive */
+
+		"@typescript-eslint/brace-style": "off",																				/* Enforce consistent brace style for blocks */
+		"@typescript-eslint/comma-dangle": "off",																				/* Require or disallow trailing comma */
+		"@typescript-eslint/comma-spacing": "off",																			/* Enforces consistent spacing before and after commas */
+		"@typescript-eslint/default-param-last": "off",																	/* Enforce default parameters to be last */
+		"@typescript-eslint/dot-notation": "off",																				/* enforce dot notation whenever possible */
+		"@typescript-eslint/func-call-spacing": "off",																	/* Require or disallow spacing between function identifiers and their invocations */
+		"@typescript-eslint/indent": "off",																							/* Enforce consistent indentation */
+		"@typescript-eslint/init-declarations": "off",																	/* require or disallow initialization in variable declarations */
+		"@typescript-eslint/keyword-spacing": "off",																		/* Enforce consistent spacing before and after keywords */
+		"@typescript-eslint/lines-between-class-members": "off",												/* Require or disallow an empty line between class members */
+		"@typescript-eslint/no-array-constructor": "off",																/* Disallow generic Array constructors */
+		"@typescript-eslint/no-dupe-class-members": "off",															/* Disallow duplicate class members */
+		"@typescript-eslint/no-duplicate-imports": "off",																/* Disallow duplicate imports */
+		"@typescript-eslint/no-empty-function": [																				/* Disallow empty functions */
+			"error",
+			{ "allow": [ "private-constructors", "protected-constructors"] }
+		],
+		"@typescript-eslint/no-extra-parens": "off",																		/* Disallow unnecessary parentheses */
+		"@typescript-eslint/no-extra-semi": "off",																			/* Disallow unnecessary semicolons */
+		"@typescript-eslint/no-implied-eval": "off",																		/* Disallow the use of eval()-like methods */
+		"@typescript-eslint/no-invalid-this": "off",																		/* Disallow this keywords outside of classes or class-like objects */
+		"@typescript-eslint/no-loop-func": "off",																				/* Disallow function declarations that contain unsafe references inside loop statements */
+		"@typescript-eslint/no-loss-of-precision": "off",																/* Disallow literal numbers that lose precision */
+		"@typescript-eslint/no-magic-numbers": "off",																		/* Disallow magic numbers */
+		"@typescript-eslint/no-redeclare": "off",																				/* Disallow variable redeclaration */
+		"@typescript-eslint/no-shadow": "off",																					/* Disallow variable declarations from shadowing variables declared in the outer scope */
+		"@typescript-eslint/no-throw-literal": "off",																		/* Disallow throwing literals as exceptions */
+		"@typescript-eslint/no-unused-expressions": "off",															/* Disallow unused expressions */
+		"@typescript-eslint/no-unused-vars": "off",																			/* Disallow unused variables */
+		"@typescript-eslint/no-use-before-define": "off",																/* Disallow the use of variables before they are defined */
+		"@typescript-eslint/no-useless-constructor": "off",															/* Disallow unnecessary constructors */
+		"@typescript-eslint/object-curly-spacing": "off",																/* Enforce consistent spacing inside braces */
+		"@typescript-eslint/quotes": "off",																							/* Enforce the consistent use of either backticks, double, or single quotes */
+		"@typescript-eslint/require-await": "off",																			/* Disallow async functions which have no await expression */
+		"@typescript-eslint/return-await": "off",																				/* Enforces consistent returning of awaited values */
+		"@typescript-eslint/semi": "off",																								/* Require or disallow semicolons instead of ASI */
+		"@typescript-eslint/space-before-function-paren": "off",												/* Enforces consistent spacing before function parenthesis */
+		"@typescript-eslint/space-infix-ops": "off"																			/* This rule is aimed at ensuring there are spaces around infix operators */
+	}
+}

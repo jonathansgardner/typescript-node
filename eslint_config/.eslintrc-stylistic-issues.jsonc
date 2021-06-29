@@ -118,7 +118,7 @@
 		"max-statements-per-line": "error",								/* enforce a maximum number of statements allowed per line */
 		"multiline-comment-style": [											/* enforce a particular style for multiline comments */
 			"error",
-			"bare-block"
+			"separate-lines"
 		],
 		"multiline-ternary": [														/* enforce newlines between operands of ternary expressions */
 			"error",
@@ -177,6 +177,9 @@
 		"one-var": [																			/* enforce variables to be declared either together or separately in functions */
 			"error",
 			{
+				"var": "consecutive",
+				"let": "consecutive",
+				"const": "consecutive",
 				"separateRequires": true
 			}
 		],

@@ -34,11 +34,116 @@
 		"@typescript-eslint/consistent-type-definitions": "error",											/* Consistent with type definition either interface or type */
 		"@typescript-eslint/consistent-type-imports": "error",													/* Enforces consistent usage of type imports */
 		"@typescript-eslint/explicit-function-return-type": "error",										/* Require explicit return types on functions and class methods */
-		"@typescript-eslint/explicit-member-accessibility": "off",											/* Require explicit accessibility modifiers on class properties and methods */
-		"@typescript-eslint/member-delimiter-style": "off",															/* Require a specific member delimiter style for interfaces and type literals */
-		"@typescript-eslint/member-ordering": "off",																		/* Require a consistent member declaration order */
-		"@typescript-eslint/method-signature-style": "off",															/* Enforces using a particular method signature syntax. */
-		"@typescript-eslint/naming-convention": "off",																	/* Enforces naming conventions for everything across a codebase */
+		"@typescript-eslint/explicit-member-accessibility": "error",										/* Require explicit accessibility modifiers on class properties and methods */
+		"@typescript-eslint/member-delimiter-style": "error",														/* Require a specific member delimiter style for interfaces and type literals */
+		"@typescript-eslint/member-ordering": [																		/* Require a consistent member declaration order */
+			"error",
+			{
+				"default": [
+					// Index signature
+					"signature",
+			
+					// Fields
+					"private-static-field",
+					"protected-static-field",
+					"public-static-field",
+			
+					"private-decorated-field",
+					"protected-decorated-field",
+					"public-decorated-field",
+			
+					"private-instance-field",
+					"protected-instance-field",
+					"public-instance-field",
+			
+					"private-abstract-field",
+					"protected-abstract-field",
+					"public-abstract-field",
+			
+					"private-field",
+					"protected-field",
+					"public-field",
+			
+					"static-field",
+					"decorated-field",
+					"instance-field",
+					"abstract-field",
+					"field",
+			
+					// Constructors
+					"private-constructor",
+					"protected-constructor",
+					"public-constructor",
+					
+					"constructor",
+			
+					// Methods
+					"private-static-method",
+					"protected-static-method",
+					"public-static-method",
+			
+					"private-decorated-method",
+					"protected-decorated-method",
+					"public-decorated-method",
+			
+					"private-instance-method",
+					"protected-instance-method",
+					"public-instance-method",
+			
+					"private-abstract-method",
+					"protected-abstract-method",
+					"public-abstract-method",
+			
+					"private-method",
+					"protected-method",
+					"public-method",
+			
+					"static-method",
+					"decorated-method",
+					"instance-method",
+					"abstract-method",
+					"method"
+				]
+			}
+		],
+		"@typescript-eslint/method-signature-style": "error",														/* Enforces using a particular method signature syntax. */
+		"@typescript-eslint/naming-convention": [																				/* Enforces naming conventions for everything across a codebase */
+			"error",
+			{
+				"selector": "default",
+				"format": [ "camelCase" ],
+				"leadingUnderscore": "forbid",
+				"trailingUnderscore": "forbid"
+			},
+			{ // consts (can be uppercase)
+				"selector": "variable",
+				"modifiers": [ "const" ],
+				"format": [
+					"camelCase",
+					"UPPER_CASE"
+				]
+			},
+			{ // global consts (must be uppercase)
+				"selector": "variable",
+				"modifiers": [
+					"const",
+					"global"
+				],
+				"format": [ "UPPER_CASE" ]
+			},
+			{ // static readonly class, and type properties (must be uppercase)
+				"selector": "property",
+				"modifiers": [
+					"readonly",
+					"static"
+				],
+				"format": [ "UPPER_CASE" ]
+			},
+			{ // classes, interfaces, type aliases, enums, and type parameters
+				"selector": "typeLike",
+				"format": [ "PascalCase" ]
+			}
+		],
 		"@typescript-eslint/no-base-to-string": "off",																	/* Requires that .toString() is only called on objects which provide useful information when stringified */
 		"@typescript-eslint/no-confusing-non-null-assertion": "off",										/* Disallow non-null assertion in locations that may be confusing */
 		"@typescript-eslint/no-confusing-void-expression": "off",												/* Requires expressions of type void to appear in statement position */

@@ -33,7 +33,7 @@
 			"error",
 			{ "enforceForClassMembers": true }
 		],
-		"no-useless-constructor": "warn",									/* disallow unnecessary constructors */
+		"no-useless-constructor": "off",									/* disallow unnecessary constructors */
 		"no-useless-rename": "error",											/* disallow renaming import, export, and destructured assignments to the same name */
 		"no-var": "error",																/* require `let` or `const` instead of `var` */
 		"object-shorthand": "error",											/* require or disallow method and property shorthand syntax for object literals */

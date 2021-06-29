@@ -1,8 +1,8 @@
-// consecutive variables
-const d = 5;
-const a = 2,
-			b = 1,
-			c = 3;
+// consecutive variables - global variables must be capitalized
+const A = 2,
+			B = 1,
+			C = 3,
+			D = 5;
 let v = 5;
 
 v += 3;
@@ -11,17 +11,20 @@ v **= 3;
 // interface keyword
 interface T1 {
   greeting: string;
+	printMessage: () => string;
 }
 
-console.log( a, b, c, d );
+console.log( A, B, C, D );
 console.log( v );
 
-const obj = {
-	'1': 'one',
-	test: 'testing'
-};
+{
+	const obj = {
+		'1': 'one',
+		test: 'testing'
+	};
 
-console.log( obj );
+	console.log( obj );
+}
 
 function* other() : Generator<number> {
 	yield 2;
@@ -38,7 +41,7 @@ generator();
 	console.log( arg1, arg2, arg3 );
 
 	// function declaration
-	function print(
+	function printMessage(
 		message: string
 	) : ( string | null ) {
 		return message
@@ -53,39 +56,37 @@ generator();
 	const x = ( y++, arg1 );
 
 	// expression
-	print( x );
+	printMessage( x );
 } )( 'hello', 2, true );
 
 // consecutive variables
-const arr = [
-	1,
-	2,
-	3
-];
-const testBool = ( arr[ 0 ] + arr[ 1 ] ) * arr[ 2 ];
+const ARR = [
+				1,
+				2,
+				3
+			],
+			TEST_BOOL = ( ARR[ 0 ] + ARR[ 1 ] ) * ARR[ 2 ];
 
-console.log( testBool );
+console.log( TEST_BOOL );
 
-arr.reverse()
+ARR.reverse()
 	.sort();
 
 class TestClass implements T1 {
-	readonly greeting: string
+	public readonly greeting: string = 'test';
 
-	constructor( greeting : string ) {
-		this.greeting = greeting;
-	}
+	public constructor() {}
 
 	private getPrintMessage(): string {
 		return `${ this.greeting } I'm TestClass`;
 	}
 
-	print(): string {
+	public printMessage(): string {
 		return this.getPrintMessage();
 	}
 }
 
-new TestClass( 'hi' ).print();
+new TestClass().printMessage();
 
 switch ( v ) {
 	case 1:

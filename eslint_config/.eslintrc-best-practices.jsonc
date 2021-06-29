@@ -46,7 +46,10 @@
 		"no-constructor-return": "error",									/* disallow returning value from constructor */
 		"no-div-regex": "off",														/* disallow division operators explicitly at the beginning of regular expressions */
 		"no-else-return": "error",												/* disallow `else` blocks after `return` statements in `if` statements */
-		"no-empty-function": "error",											/* disallow empty functions */
+		"no-empty-function": [														/* disallow empty functions */
+			"error",
+			{ "allow": [ "constructors" ] }
+		],
 		"no-eq-null": "error",														/* disallow `null` comparisons without type-checking operators */
 		"no-eval": "error",																/* disallow the use of `eval()`*/
 		"no-extend-native": "error",											/* disallow extending native types */
