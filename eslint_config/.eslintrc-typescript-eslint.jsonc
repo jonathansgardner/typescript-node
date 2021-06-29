@@ -36,68 +36,68 @@
 		"@typescript-eslint/explicit-function-return-type": "error",										/* Require explicit return types on functions and class methods */
 		"@typescript-eslint/explicit-member-accessibility": "error",										/* Require explicit accessibility modifiers on class properties and methods */
 		"@typescript-eslint/member-delimiter-style": "error",														/* Require a specific member delimiter style for interfaces and type literals */
-		"@typescript-eslint/member-ordering": [																		/* Require a consistent member declaration order */
+		"@typescript-eslint/member-ordering": [																					/* Require a consistent member declaration order */
 			"error",
 			{
 				"default": [
 					// Index signature
 					"signature",
-			
+
 					// Fields
 					"private-static-field",
 					"protected-static-field",
 					"public-static-field",
-			
+
 					"private-decorated-field",
 					"protected-decorated-field",
 					"public-decorated-field",
-			
+
 					"private-instance-field",
 					"protected-instance-field",
 					"public-instance-field",
-			
+
 					"private-abstract-field",
 					"protected-abstract-field",
 					"public-abstract-field",
-			
+
 					"private-field",
 					"protected-field",
 					"public-field",
-			
+
 					"static-field",
 					"decorated-field",
 					"instance-field",
 					"abstract-field",
 					"field",
-			
+
 					// Constructors
 					"private-constructor",
 					"protected-constructor",
 					"public-constructor",
-					
+
 					"constructor",
-			
+
 					// Methods
 					"private-static-method",
 					"protected-static-method",
 					"public-static-method",
-			
+
 					"private-decorated-method",
 					"protected-decorated-method",
 					"public-decorated-method",
-			
+
 					"private-instance-method",
 					"protected-instance-method",
 					"public-instance-method",
-			
+
 					"private-abstract-method",
 					"protected-abstract-method",
 					"public-abstract-method",
-			
+
 					"private-method",
 					"protected-method",
 					"public-method",
-			
+
 					"static-method",
 					"decorated-method",
 					"instance-method",
@@ -144,9 +144,9 @@
 				"format": [ "PascalCase" ]
 			}
 		],
-		"@typescript-eslint/no-base-to-string": "off",																	/* Requires that .toString() is only called on objects which provide useful information when stringified */
-		"@typescript-eslint/no-confusing-non-null-assertion": "off",										/* Disallow non-null assertion in locations that may be confusing */
-		"@typescript-eslint/no-confusing-void-expression": "off",												/* Requires expressions of type void to appear in statement position */
+		"@typescript-eslint/no-base-to-string": "error",																/* Requires that .toString() is only called on objects which provide useful information when stringified */
+		"@typescript-eslint/no-confusing-non-null-assertion": "error",									/* Disallow non-null assertion in locations that may be confusing */
+		"@typescript-eslint/no-confusing-void-expression": "error",											/* Requires expressions of type void to appear in statement position */
 		"@typescript-eslint/no-dynamic-delete": "off",																	/* Disallow the delete operator with computed key expressions */
 		"@typescript-eslint/no-extraneous-class": "off",																/* Forbids the use of classes as namespaces */
 		"@typescript-eslint/no-floating-promises": "off",																/* Requires Promise-like values to be handled appropriately */

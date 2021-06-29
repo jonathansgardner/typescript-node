@@ -33,7 +33,8 @@
 			"extends": [
 				"plugin:@typescript-eslint/eslint-recommended", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/src/configs/eslint-recommended.ts
 				"plugin:@typescript-eslint/recommended", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/src/configs/recommended.ts
-				"./eslint_config/.eslintrc-typescript-eslint.jsonc"
+				"./eslint_config/.eslintrc-typescript-eslint.jsonc",
+				"./eslint_config/.eslintrc-typescript-eslint-extensions.jsonc"
 			],
 			"rules": {
 				/* typescript-eslint/eslint-recommended */

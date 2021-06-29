@@ -18,7 +18,7 @@
 		"@typescript-eslint/no-duplicate-imports": "off",																/* Disallow duplicate imports */
 		"@typescript-eslint/no-empty-function": [																				/* Disallow empty functions */
 			"error",
-			{ "allow": [ "private-constructors", "protected-constructors"] }
+			{ "allow": [ "constructors", "private-constructors", "protected-constructors" ] }
 		],
 		"@typescript-eslint/no-extra-parens": "off",																		/* Disallow unnecessary parentheses */
 		"@typescript-eslint/no-extra-semi": "off",																			/* Disallow unnecessary semicolons */
