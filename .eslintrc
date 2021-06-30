@@ -33,6 +33,7 @@
 			"extends": [
 				"plugin:@typescript-eslint/eslint-recommended", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/src/configs/eslint-recommended.ts
 				"plugin:@typescript-eslint/recommended", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/src/configs/recommended.ts
+				"plugin:@typescript-eslint/recommended-requiring-type-checking", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/src/configs/recommended-requiring-type-checking.ts
 				"./eslint_config/.eslintrc-typescript-eslint.jsonc",
 				"./eslint_config/.eslintrc-typescript-eslint-extensions.jsonc"
 			],
@@ -65,6 +66,10 @@
 				// "no-empty-function": "off",										/* disallow empty functions */
 				// "no-extra-semi": "off",												/* disallow unnecessary semicolons */
 				// "no-unused-vars": "off",												/* disallow unused variables */
+
+				/* typescript-eslint/recommended-requiring-type-checking */
+				// "no-implied-eval": "off",
+				// "require-await": "off"
 			}
 		}
 	]

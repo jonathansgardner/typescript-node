@@ -96,7 +96,11 @@
 				"allowArrayStart": true
 			}
 		],
-		"lines-between-class-members": "error",						/* require or disallow an empty line between class members */
+		"lines-between-class-members": [									/* require or disallow an empty line between class members */
+			"error",
+			"always",
+			{ "exceptAfterSingleLine": true }
+		],
 		"max-depth": "warn",															/* enforce a maximum depth that blocks can be nested */
 		"max-len": [																			/* enforce a maximum line length */
 			"error",

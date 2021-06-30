@@ -18,7 +18,12 @@ console.log( A, B, C, D );
 console.log( v );
 
 {
-	const obj = {
+	interface Obj {
+		'1': string;
+		test: string;
+	};
+
+	const obj: Obj = {
 		'1': 'one',
 		test: 'testing'
 	};
@@ -73,9 +78,18 @@ ARR.reverse()
 	.sort();
 
 class TestClass implements T1 {
-	public readonly greeting: string = 'test';
+	public static readonly TEST_PROPERTY: string = 'TEST';
+	public greeting = 'hello';
 
-	public constructor() {}
+	get greet(): string {
+		return `${ this.greeting } There!`;
+	}
+
+	set greet( value: string ) {
+		this.greeting = value;
+	}
+
+	constructor() {}
 
 	private getPrintMessage(): string {
 		return `${ this.greeting } I'm TestClass`;
@@ -97,3 +111,5 @@ switch ( v ) {
 	default:
 		break;
 }
+
+export default TestClass;

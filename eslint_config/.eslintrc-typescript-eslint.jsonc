@@ -1,6 +1,6 @@
 {
 	"rules": {
-		/* typescript-eslint:recommended */
+		/* typescript-eslint/recommended */
 		// "@typescript-eslint/adjacent-overload-signatures": "error",									/* Require that member overloads be consecutive */
 		// "@typescript-eslint/ban-ts-comment": "error",																/* Bans @ts-<directive> comments from being used or requires descriptions after directive */
 		// "@typescript-eslint/ban-types": "error",																			/* Bans specific types from being used */
@@ -19,8 +19,13 @@
 		// "@typescript-eslint/prefer-namespace-keyword": "error",											/* Require the use of the namespace keyword instead of the module keyword to declare custom TypeScript modules */
 		// "@typescript-eslint/triple-slash-reference": "error",												/* Sets preference level for triple slash directives versus ES6-style import declarations */
 
+		/* typescript-eslint/recommended-requiring-type-checking */
+		// "@typescript-eslint/await-thenable": "error",																/* Disallows awaiting a value that is not a Thenable */
+		// "@typescript-eslint/no-floating-promises": "error",													/* Requires Promise-like values to be handled appropriately */
+		// "@typescript-eslint/no-for-in-array": "error",																/* Disallow iterating over an array with a for-in loop */
+		// "@typescript-eslint/no-misused-promises": "error",														/* Avoid using promises in places not designed to handle them */
+
 		"@typescript-eslint/array-type": "off",																					/* Requires using either T[] or Array<T> for arrays */
-		"@typescript-eslint/await-thenable": "error",																		/* Disallows awaiting a value that is not a Thenable */
 		"@typescript-eslint/ban-tslint-comment": "error",																/* Bans // tslint:<rule-flag> comments from being used */
 		"@typescript-eslint/class-literal-property-style": "error",											/* Ensures that literals on classes are exposed in a consistent style */
 		"@typescript-eslint/consistent-indexed-object-style": "off",										/* Enforce or disallow the use of the record type */
@@ -34,7 +39,16 @@
 		"@typescript-eslint/consistent-type-definitions": "error",											/* Consistent with type definition either interface or type */
 		"@typescript-eslint/consistent-type-imports": "error",													/* Enforces consistent usage of type imports */
 		"@typescript-eslint/explicit-function-return-type": "error",										/* Require explicit return types on functions and class methods */
-		"@typescript-eslint/explicit-member-accessibility": "error",										/* Require explicit accessibility modifiers on class properties and methods */
+		"@typescript-eslint/explicit-member-accessibility": [														/* Require explicit accessibility modifiers on class properties and methods */
+			"error",
+			{
+				"accessibility": "explicit",
+				"overrides": {
+					"accessors": "no-public",
+					"constructors": "no-public"
+				}
+			}
+		],
 		"@typescript-eslint/member-delimiter-style": "error",														/* Require a specific member delimiter style for interfaces and type literals */
 		"@typescript-eslint/member-ordering": [																					/* Require a consistent member declaration order */
 			"error",
@@ -47,23 +61,18 @@
 					"private-static-field",
 					"protected-static-field",
 					"public-static-field",
-
 					"private-decorated-field",
 					"protected-decorated-field",
 					"public-decorated-field",
-
 					"private-instance-field",
 					"protected-instance-field",
 					"public-instance-field",
-
 					"private-abstract-field",
 					"protected-abstract-field",
 					"public-abstract-field",
-
 					"private-field",
 					"protected-field",
 					"public-field",
-
 					"static-field",
 					"decorated-field",
 					"instance-field",
@@ -74,30 +83,24 @@
 					"private-constructor",
 					"protected-constructor",
 					"public-constructor",
-
 					"constructor",
 
 					// Methods
 					"private-static-method",
 					"protected-static-method",
 					"public-static-method",
-
 					"private-decorated-method",
 					"protected-decorated-method",
 					"public-decorated-method",
-
 					"private-instance-method",
 					"protected-instance-method",
 					"public-instance-method",
-
 					"private-abstract-method",
 					"protected-abstract-method",
 					"public-abstract-method",
-
 					"private-method",
 					"protected-method",
 					"public-method",
-
 					"static-method",
 					"decorated-method",
 					"instance-method",
@@ -115,21 +118,16 @@
 				"leadingUnderscore": "forbid",
 				"trailingUnderscore": "forbid"
 			},
-			{ // consts (can be uppercase)
-				"selector": "variable",
-				"modifiers": [ "const" ],
-				"format": [
-					"camelCase",
-					"UPPER_CASE"
-				]
-			},
 			{ // global consts (must be uppercase)
 				"selector": "variable",
 				"modifiers": [
 					"const",
 					"global"
 				],
-				"format": [ "UPPER_CASE" ]
+				"format": [
+					"camelCase",
+					"UPPER_CASE"
+				]
 			},
 			{ // static readonly class, and type properties (must be uppercase)
 				"selector": "property",
@@ -147,16 +145,20 @@
 		"@typescript-eslint/no-base-to-string": "error",																/* Requires that .toString() is only called on objects which provide useful information when stringified */
 		"@typescript-eslint/no-confusing-non-null-assertion": "error",									/* Disallow non-null assertion in locations that may be confusing */
 		"@typescript-eslint/no-confusing-void-expression": "error",											/* Requires expressions of type void to appear in statement position */
-		"@typescript-eslint/no-dynamic-delete": "off",																	/* Disallow the delete operator with computed key expressions */
-		"@typescript-eslint/no-extraneous-class": "off",																/* Forbids the use of classes as namespaces */
-		"@typescript-eslint/no-floating-promises": "off",																/* Requires Promise-like values to be handled appropriately */
-		"@typescript-eslint/no-for-in-array": "off",																		/* Disallow iterating over an array with a for-in loop */
-		"@typescript-eslint/no-implicit-any-catch": "off",															/* Disallow usage of the implicit any type in catch clauses */
-		"@typescript-eslint/no-invalid-void-type": "off",																/* Disallows usage of void type outside of generic or return types */
-		"@typescript-eslint/no-misused-promises": "off",																/* Avoid using promises in places not designed to handle them */
+		"@typescript-eslint/no-dynamic-delete": "error",																/* Disallow the delete operator with computed key expressions */
+		"@typescript-eslint/no-extraneous-class": "error",															/* Forbids the use of classes as namespaces */
+		"@typescript-eslint/no-implicit-any-catch": "error",														/* Disallow usage of the implicit any type in catch clauses */
+		"@typescript-eslint/no-invalid-void-type": "error",															/* Disallows usage of void type outside of generic or return types */
 		"@typescript-eslint/no-parameter-properties": "off",														/* Disallow the use of parameter properties in class constructors */
-		"@typescript-eslint/no-require-imports": "off",																	/* Disallows invocation of require() */
-		"@typescript-eslint/no-type-alias": "off",																			/* Disallow the use of type aliases */
+		"@typescript-eslint/no-require-imports": "error",																/* Disallows invocation of require() */
+		"@typescript-eslint/no-type-alias": [																						/* Disallow the use of type aliases */
+			"error", 
+			{
+				"allowAliases": "in-unions-and-intersections",
+				"allowConditionalTypes": "always",
+				"allowMappedTypes": "always"
+			}
+		],
 		"@typescript-eslint/no-unnecessary-boolean-literal-compare": "off",							/* Flags unnecessary equality comparisons against boolean literals */
 		"@typescript-eslint/no-unnecessary-condition": "off",														/* Prevents conditionals where the type is always truthy or always falsy */
 		"@typescript-eslint/no-unnecessary-qualifier": "off",														/* Warns when a namespace qualifier is unnecessary */
