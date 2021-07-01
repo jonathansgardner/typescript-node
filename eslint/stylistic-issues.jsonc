@@ -25,7 +25,8 @@
 			{ "allowSingleLine": true }
 		],
 		"camelcase": "error",															/* enforce camelcase naming convention */
-		"comma-dangle": [																	/* enforce or disallow capitalization of the first letter of a comment */
+		"capitalized-comments": "off",										/* enforce or disallow capitalization of the first letter of a comment */
+		"comma-dangle": [																	/*require or disallow trailing commas */
 			"error",
 			"never"
 		],
@@ -65,7 +66,7 @@
 		"implicit-arrow-linebreak": "error",							/* enforce the location of arrow function bodies */
 		"indent": [																				/* enforce consistent indentation */
 			"error",
-			"tab",
+			2,
 			{
 				"SwitchCase": 1,
 				"VariableDeclarator": {
@@ -180,12 +181,7 @@
 		],
 		"one-var": [																			/* enforce variables to be declared either together or separately in functions */
 			"error",
-			{
-				"var": "consecutive",
-				"let": "consecutive",
-				"const": "consecutive",
-				"separateRequires": true
-			}
+			"never"
 		],
 		"one-var-declaration-per-line": [									/* 	require or disallow newlines around variable declarations */
 			"error",

@@ -24,8 +24,17 @@
 		// "@typescript-eslint/no-floating-promises": "error",													/* Requires Promise-like values to be handled appropriately */
 		// "@typescript-eslint/no-for-in-array": "error",																/* Disallow iterating over an array with a for-in loop */
 		// "@typescript-eslint/no-misused-promises": "error",														/* Avoid using promises in places not designed to handle them */
+		// "@typescript-eslint/no-unnecessary-type-assertion": "error",									/* Warns if a type assertion does not change the type of an expression */
+		// "@typescript-eslint/no-unsafe-assignment": "error",													/* Disallows assigning any to variables and properties */
+		// "@typescript-eslint/no-unsafe-call": "error",																/* Disallows calling an any type value */
+		// "@typescript-eslint/no-unsafe-member-access": "error",												/* Disallows member access on any typed variables */
+		// "@typescript-eslint/no-unsafe-return": "error",															/* Disallows returning any from a function */
+		// "@typescript-eslint/prefer-regexp-exec": "error",														/* Enforce that RegExp#exec is used instead of String#match if no global flag is provided */
+		// "@typescript-eslint/restrict-plus-operands": "error",												/* When adding two variables, operands must both be of type number or of type string */
+		// "@typescript-eslint/restrict-template-expressions": "error",									/* Enforce template literal expressions to be of string type */
+		// "@typescript-eslint/unbound-method": "error",																/* Enforces unbound methods are called with their expected scope */
 
-		"@typescript-eslint/array-type": "off",																					/* Requires using either T[] or Array<T> for arrays */
+		"@typescript-eslint/array-type": "error",																				/* Requires using either T[] or Array<T> for arrays */
 		"@typescript-eslint/ban-tslint-comment": "error",																/* Bans // tslint:<rule-flag> comments from being used */
 		"@typescript-eslint/class-literal-property-style": "error",											/* Ensures that literals on classes are exposed in a consistent style */
 		"@typescript-eslint/consistent-indexed-object-style": "off",										/* Enforce or disallow the use of the record type */
@@ -56,7 +65,6 @@
 				"default": [
 					// Index signature
 					"signature",
-
 					// Fields
 					"private-static-field",
 					"protected-static-field",
@@ -78,13 +86,11 @@
 					"instance-field",
 					"abstract-field",
 					"field",
-
 					// Constructors
 					"private-constructor",
 					"protected-constructor",
 					"public-constructor",
 					"constructor",
-
 					// Methods
 					"private-static-method",
 					"protected-static-method",
@@ -151,49 +157,33 @@
 		"@typescript-eslint/no-invalid-void-type": "error",															/* Disallows usage of void type outside of generic or return types */
 		"@typescript-eslint/no-parameter-properties": "off",														/* Disallow the use of parameter properties in class constructors */
 		"@typescript-eslint/no-require-imports": "error",																/* Disallows invocation of require() */
-		"@typescript-eslint/no-type-alias": [																						/* Disallow the use of type aliases */
-			"error", 
-			{
-				"allowAliases": "in-unions-and-intersections",
-				"allowConditionalTypes": "always",
-				"allowMappedTypes": "always"
-			}
-		],
-		"@typescript-eslint/no-unnecessary-boolean-literal-compare": "off",							/* Flags unnecessary equality comparisons against boolean literals */
-		"@typescript-eslint/no-unnecessary-condition": "off",														/* Prevents conditionals where the type is always truthy or always falsy */
-		"@typescript-eslint/no-unnecessary-qualifier": "off",														/* Warns when a namespace qualifier is unnecessary */
-		"@typescript-eslint/no-unnecessary-type-arguments": "off",											/* Enforces that type arguments will not be used if not required */
-		"@typescript-eslint/no-unnecessary-type-assertion": "off",											/* Warns if a type assertion does not change the type of an expression */
-		"@typescript-eslint/no-unnecessary-type-constraint": "off",											/* Disallows unnecessary constraints on generic types */
-		"@typescript-eslint/no-unsafe-argument": "off",																	/* Disallows calling an function with an any type value */
-		"@typescript-eslint/no-unsafe-assignment": "off",																/* Disallows assigning any to variables and properties */
-		"@typescript-eslint/no-unsafe-call": "off",																			/* Disallows calling an any type value */
-		"@typescript-eslint/no-unsafe-member-access": "off",														/* Disallows member access on any typed variables */
-		"@typescript-eslint/no-unsafe-return": "off",																		/* Disallows returning any from a function */
+		"@typescript-eslint/no-type-alias": "off",																			/* Disallow the use of type aliases */
+		"@typescript-eslint/no-unnecessary-boolean-literal-compare": "error",						/* Flags unnecessary equality comparisons against boolean literals */
+		"@typescript-eslint/no-unnecessary-condition": "error",													/* Prevents conditionals where the type is always truthy or always falsy */
+		"@typescript-eslint/no-unnecessary-qualifier": "error",													/* Warns when a namespace qualifier is unnecessary */
+		"@typescript-eslint/no-unnecessary-type-arguments": "error",										/* Enforces that type arguments will not be used if not required */
+		"@typescript-eslint/no-unnecessary-type-constraint": "error",										/* Disallows unnecessary constraints on generic types */
+		"@typescript-eslint/no-unsafe-argument": "error",																/* Disallows calling an function with an any type value */
 		"@typescript-eslint/non-nullable-type-assertion-style": "off",									/* Prefers a non-null assertion over explicit type cast when possible */
-		"@typescript-eslint/prefer-enum-initializers": "off",														/* Prefer initializing each enums member value */
-		"@typescript-eslint/prefer-for-of": "off",																			/* Prefer a ‘for-of’ loop over a standard ‘for’ loop if the index is only used to access the array being iterated */
-		"@typescript-eslint/prefer-function-type": "off",																/* Use function types instead of interfaces with call signatures */
-		"@typescript-eslint/prefer-includes": "off",																		/* Enforce includes method over indexOf method */
-		"@typescript-eslint/prefer-literal-enum-member": "off",													/* Require that all enum members be literal values to prevent unintended enum member name shadow issues */
-		"@typescript-eslint/prefer-nullish-coalescing": "off",													/* Enforce the usage of the nullish coalescing operator instead of logical chaining */
-		"@typescript-eslint/prefer-optional-chain": "off",															/* Prefer using concise optional chain expressions instead of chained logical ands */
-		"@typescript-eslint/prefer-readonly": "off",																		/* Requires that private members are marked as readonly if they're never modified outside of the constructor */
-		"@typescript-eslint/prefer-readonly-parameter-types": "off",										/* Requires that function parameters are typed as readonly to prevent accidental mutation of inputs */
-		"@typescript-eslint/prefer-reduce-type-parameter": "off",												/* Prefer using type parameter when calling Array#reduce instead of casting */
-		"@typescript-eslint/prefer-regexp-exec": "off",																	/* Enforce that RegExp#exec is used instead of String#match if no global flag is provided */
-		"@typescript-eslint/prefer-string-starts-ends-with": "off",											/* Enforce the use of String#startsWith and String#endsWith instead of other equivalent methods of checking substrings */
+		"@typescript-eslint/prefer-enum-initializers": "error",													/* Prefer initializing each enums member value */
+		"@typescript-eslint/prefer-for-of": "error",																		/* Prefer a ‘for-of’ loop over a standard ‘for’ loop if the index is only used to access the array being iterated */
+		"@typescript-eslint/prefer-function-type": "error",															/* Use function types instead of interfaces with call signatures */
+		"@typescript-eslint/prefer-includes": "error",																	/* Enforce includes method over indexOf method */
+		"@typescript-eslint/prefer-literal-enum-member": "error",												/* Require that all enum members be literal values to prevent unintended enum member name shadow issues */
+		"@typescript-eslint/prefer-nullish-coalescing": "error",												/* Enforce the usage of the nullish coalescing operator instead of logical chaining */
+		"@typescript-eslint/prefer-optional-chain": "error",														/* Prefer using concise optional chain expressions instead of chained logical ands */
+		"@typescript-eslint/prefer-readonly": "error",																	/* Requires that private members are marked as readonly if they're never modified outside of the constructor */
+		"@typescript-eslint/prefer-readonly-parameter-types": "error",									/* Requires that function parameters are typed as readonly to prevent accidental mutation of inputs */
+		"@typescript-eslint/prefer-reduce-type-parameter": "error",											/* Prefer using type parameter when calling Array#reduce instead of casting */
+		"@typescript-eslint/prefer-string-starts-ends-with": "error",										/* Enforce the use of String#startsWith and String#endsWith instead of other equivalent methods of checking substrings */
 		"@typescript-eslint/prefer-ts-expect-error": "off",															/* Recommends using @ts-expect-error over @ts-ignore */
-		"@typescript-eslint/promise-function-async": "off",															/* Requires any function or method that returns a Promise to be marked async */
+		"@typescript-eslint/promise-function-async": "error",														/* Requires any function or method that returns a Promise to be marked async */
 		"@typescript-eslint/require-array-sort-compare": "off",													/* Requires Array#sort calls to always provide a compareFunction */
-		"@typescript-eslint/restrict-plus-operands": "off",															/* When adding two variables, operands must both be of type number or of type string */
-		"@typescript-eslint/restrict-template-expressions": "off",											/* Enforce template literal expressions to be of string type */
 		"@typescript-eslint/sort-type-union-intersection-members": "off",								/* Enforces that members of a type union/intersection are sorted alphabetically */
-		"@typescript-eslint/strict-boolean-expressions": "off",													/* Restricts the types allowed in boolean expressions */
-		"@typescript-eslint/switch-exhaustiveness-check": "off",												/* Exhaustiveness checking in switch with union type */
-		"@typescript-eslint/type-annotation-spacing": "off",														/* Require consistent spacing around type annotations */
+		"@typescript-eslint/strict-boolean-expressions": "error",												/* Restricts the types allowed in boolean expressions */
+		"@typescript-eslint/switch-exhaustiveness-check": "error",											/* Exhaustiveness checking in switch with union type */
+		"@typescript-eslint/type-annotation-spacing": "error",													/* Require consistent spacing around type annotations */
 		"@typescript-eslint/typedef": "off",																						/* Requires type annotations to exist */
-		"@typescript-eslint/unbound-method": "off",																			/* Enforces unbound methods are called with their expected scope */
-		"@typescript-eslint/unified-signatures": "off"																	/* Warns for any two overloads that could be unified into one by using a union or an optional/rest parameter */
+		"@typescript-eslint/unified-signatures": "error"																/* Warns for any two overloads that could be unified into one by using a union or an optional/rest parameter */
 	}
 }

@@ -46,8 +46,10 @@
 			"all",
 			{
 				"conditionalAssign": false,
+				"returnAssign": false,
 				"ignoreJSX": "multi-line",
 				"nestedBinaryExpressions": false,
+				"enforceForArrowConditionals": false,
 				"enforceForSequenceExpressions": false
 			}
 		],

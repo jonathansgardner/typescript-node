@@ -17,12 +17,12 @@
 	],
 	"extends": [
 		"eslint:recommended", // https://github.com/eslint/eslint/blob/master/conf/eslint-recommended.js
-		"./eslint_config/.eslintrc-possible-errors.jsonc",
-		"./eslint_config/.eslintrc-best-practices.jsonc",
-		"./eslint_config/.eslintrc-strict-mode.jsonc",
-		"./eslint_config/.eslintrc-variables.jsonc",
-		"./eslint_config/.eslintrc-stylistic-issues.jsonc",
-		"./eslint_config/.eslintrc-es6.jsonc"
+		"./eslint/possible-errors.jsonc",
+		"./eslint/best-practices.jsonc",
+		"./eslint/strict-mode.jsonc",
+		"./eslint/variables.jsonc",
+		"./eslint/stylistic-issues.jsonc",
+		"./eslint/es6.jsonc"
 	],
 	"rules": {
 
@@ -34,8 +34,8 @@
 				"plugin:@typescript-eslint/eslint-recommended", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/src/configs/eslint-recommended.ts
 				"plugin:@typescript-eslint/recommended", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/src/configs/recommended.ts
 				"plugin:@typescript-eslint/recommended-requiring-type-checking", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/src/configs/recommended-requiring-type-checking.ts
-				"./eslint_config/.eslintrc-typescript-eslint.jsonc",
-				"./eslint_config/.eslintrc-typescript-eslint-extensions.jsonc"
+				"./eslint/typescript-eslint.jsonc",
+				"./eslint/typescript-eslint-extensions.jsonc"
 			],
 			"rules": {
 				/* typescript-eslint/eslint-recommended */

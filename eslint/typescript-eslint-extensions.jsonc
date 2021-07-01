@@ -3,13 +3,32 @@
 		/* typescript-eslint:recommended */
 		// "@typescript-eslint/adjacent-overload-signatures": "error",									/* Require that member overloads be consecutive */
 
-		"@typescript-eslint/brace-style": "off",																				/* Enforce consistent brace style for blocks */
-		"@typescript-eslint/comma-dangle": "off",																				/* Require or disallow trailing comma */
-		"@typescript-eslint/comma-spacing": "off",																			/* Enforces consistent spacing before and after commas */
-		"@typescript-eslint/default-param-last": "off",																	/* Enforce default parameters to be last */
-		"@typescript-eslint/dot-notation": "off",																				/* enforce dot notation whenever possible */
-		"@typescript-eslint/func-call-spacing": "off",																	/* Require or disallow spacing between function identifiers and their invocations */
-		"@typescript-eslint/indent": "off",																							/* Enforce consistent indentation */
+		"@typescript-eslint/brace-style": [																							/* Enforce consistent brace style for blocks */
+			"error",
+			"1tbs",
+			{ "allowSingleLine": true }
+		],
+		"@typescript-eslint/comma-dangle": [																						/*Require or disallow trailing commas */
+			"error",
+			"never"
+		],
+		"@typescript-eslint/comma-spacing": "error",																		/* Enforces consistent spacing before and after commas */
+		"@typescript-eslint/default-param-last": "error",																/* Enforce default parameters to be last */
+		"@typescript-eslint/dot-notation": "error",																			/* enforce dot notation whenever possible */
+		"@typescript-eslint/func-call-spacing": "error",																/* Require or disallow spacing between function identifiers and their invocations */
+		"@typescript-eslint/indent": [																									/* Enforce consistent indentation */
+			"error",
+			2,
+			{
+				"SwitchCase": 1,
+				"VariableDeclarator": {
+					"var": 2,
+					"let": 2,
+					"const": 3
+				},
+				"offsetTernaryExpressions": true // doesn't seem to be working
+			}
+		],
 		"@typescript-eslint/init-declarations": "off",																	/* require or disallow initialization in variable declarations */
 		"@typescript-eslint/keyword-spacing": "off",																		/* Enforce consistent spacing before and after keywords */
 		"@typescript-eslint/lines-between-class-members": "off",												/* Require or disallow an empty line between class members */
@@ -18,7 +37,13 @@
 		"@typescript-eslint/no-duplicate-imports": "off",																/* Disallow duplicate imports */
 		"@typescript-eslint/no-empty-function": [																				/* Disallow empty functions */
 			"error",
-			{ "allow": [ "constructors", "private-constructors", "protected-constructors" ] }
+			{
+				"allow": [
+					"constructors",
+					"private-constructors",
+					"protected-constructors"
+				]
+			}
 		],
 		"@typescript-eslint/no-extra-parens": "off",																		/* Disallow unnecessary parentheses */
 		"@typescript-eslint/no-extra-semi": "off",																			/* Disallow unnecessary semicolons */
