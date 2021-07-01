@@ -1,11 +1,11 @@
 {
 	"rules": {
 		/* eslint:recommended */
-		// "constructor-super": "error",										/* require `super()` calls in constructors */
+		// "constructor-super": "error",									/* require `super()` calls in constructors */
 		// "no-class-assign": "error",										/* disallow reassigning class members */
-		// "no-const-assign": "error",											/* disallow reassigning `const` variables */
-		// "no-dupe-class-members": "error",								/* disallow duplicate class members */
-		// "no-new-symbol": "error",												/* disallow `new` operators with the `Symbol` object */
+		// "no-const-assign": "error",										/* disallow reassigning `const` variables */
+		// "no-dupe-class-members": "error",							/* disallow duplicate class members */
+		// "no-new-symbol": "error",											/* disallow `new` operators with the `Symbol` object */
 		// "no-this-before-super": "error",								/* disallow `this`/`super` before calling `super()` in constructors */
 		// "require-yield": "error",											/* require generator functions to contain `yield` */
 
@@ -33,7 +33,7 @@
 			"error",
 			{ "enforceForClassMembers": true }
 		],
-		"no-useless-constructor": "off",									/* disallow unnecessary constructors */
+		"no-useless-constructor": "error",								/* disallow unnecessary constructors */
 		"no-useless-rename": "error",											/* disallow renaming import, export, and destructured assignments to the same name */
 		"no-var": "error",																/* require `let` or `const` instead of `var` */
 		"object-shorthand": "error",											/* require or disallow method and property shorthand syntax for object literals */

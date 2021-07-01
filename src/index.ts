@@ -3,6 +3,7 @@ const a = 2;
 const b = 1;
 const c = 3;
 const d = 5;
+
 let v = 5;
 
 v += 3;
@@ -27,7 +28,7 @@ console.log( v );
   interface Obj {
     '1': string;
     test: string;
-  };
+  }
 
   const obj: Obj = {
     '1': 'one',
@@ -80,7 +81,7 @@ const TEST_BOOL = ( ARR[ 0 ] + ARR[ 1 ] ) * ARR[ 2 ];
 
 console.log( TEST_BOOL );
 
-interface Accumulator { readonly [key: string]: number };
+interface Accumulator { readonly [ key: string ]: number }
 
 const reducedArr = ARR.reduce<Accumulator>(
   ( acc: Accumulator, num: number ) => (
@@ -96,7 +97,8 @@ ARR.reverse()
 
 class TestClass implements T1 {
   public static readonly TEST_PROPERTY: string = 'TEST';
-  public greeting = 'hello';
+
+  public greeting: string;
 
   get greet(): string {
     return `${ this.greeting } There!`;
@@ -106,7 +108,9 @@ class TestClass implements T1 {
     this.greeting = value;
   }
 
-  constructor() {}
+  constructor( greeting?: string ) {
+    this.greeting = greeting ?? 'hello';
+  }
 
   private getPrintMessage(): string {
     return `${ this.greeting } I'm TestClass`;

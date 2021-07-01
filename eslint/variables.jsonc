@@ -16,8 +16,8 @@
 				"hoist": "all"
 			}
 		],
-		"no-undef-init": "off",														/* disallow initializing variables to `undefined` */
-		"no-undefined": "off",														/* disallow the use of `undefined` as an identifier */
-		"no-use-before-define": "off"											/* disallow the use of variables before they are defined */
+		"no-undef-init": "error",													/* disallow initializing variables to `undefined` */
+		"no-undefined": "error",													/* disallow the use of `undefined` as an identifier */
+		"no-use-before-define": "error"										/* disallow the use of variables before they are defined */
 	}
 }

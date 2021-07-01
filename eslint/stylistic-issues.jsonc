@@ -74,7 +74,8 @@
 					"let": 2,
 					"const": 3
 				},
-				"offsetTernaryExpressions": true // doesn't seem to be working
+				// doesn't seem to be working
+				"offsetTernaryExpressions": true
 			}
 		],
 		"jsx-quotes": "error",														/* enforce the consistent use of either double or single quotes in JSX attributes */
@@ -340,11 +341,7 @@
 			"single",
 			{ "avoidEscape": true }
 		],
-		"semi": [												          				/* require or disallow semicolons instead of ASI */
-			"error",
-			"always",
-			{ "omitLastInOneLineBlock": true }
-		],
+		"semi": "error",												          /* require or disallow semicolons instead of ASI */
 		"semi-spacing": "error",												  /* enforce consistent spacing before and after semicolons */
 		"semi-style": "error",												  	/* enforce location of semicolons */
 		"sort-keys": [																		/* 	require object keys to be sorted */
