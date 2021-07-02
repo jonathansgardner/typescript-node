@@ -62,7 +62,7 @@ generator();
   const x = ( y++, arg2 );
 
   // expression
-  printMessage( 'string' );
+  printMessage( x );
 } )( 'hello', 2, true );
 
 // consecutive variables

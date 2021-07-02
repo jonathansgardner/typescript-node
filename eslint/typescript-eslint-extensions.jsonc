@@ -5,8 +5,6 @@
     // "@typescript-eslint/no-array-constructor": "error",							/* disallow generic Array constructors */
     // "no-extra-semi": "off",
     // "@typescript-eslint/no-extra-semi": "error",											/* disallow unnecessary semicolons */
-    // "no-unused-vars": "off",
-    // "@typescript-eslint/no-unused-vars": "error",										/* disallow unused variables */
 
     /* typescript-eslint:recommended-requiring-type-checking */
     // "no-implied-eval": "off",
@@ -106,6 +104,8 @@
     "@typescript-eslint/no-throw-literal": "off",												/* disallow throwing literals as exceptions */
     "no-unused-expressions": "off",
     "@typescript-eslint/no-unused-expressions": "error",								/* disallow unused expressions */
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "error",										    /* disallow unused variables */
     "no-use-before-define": "off",
     "@typescript-eslint/no-use-before-define": "error",									/* disallow the use of variables before they are defined */
     "no-useless-constructor": "off",
