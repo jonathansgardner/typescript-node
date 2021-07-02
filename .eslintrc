@@ -1,7 +1,6 @@
 {
   "root": true,
   "env": {
-    "browser": true,
     "es2021": true,
     "node": true,
     "jest": true
@@ -24,10 +23,8 @@
     "./eslint/stylistic-issues.jsonc",
     "./eslint/es6.jsonc"
   ],
-  "rules": {
-
-  },
   "overrides": [
+    // typescript
     {
       "files": [ "**/*.{ts,tsx}" ],
       "extends": [

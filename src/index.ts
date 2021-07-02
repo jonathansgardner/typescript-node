@@ -53,14 +53,8 @@ generator();
   console.log( arg1, arg2, arg3 );
 
   // function declaration
-  function printMessage(
-    num: number
-  ): ( number | null ) {
-    return num
-      ? num + 1
-      : num > 2
-        ? num + 2
-        : null;
+  function printMessage( num: number ): number | null {
+    return num ? num + 1 : num > 2 ? num + 2 : null;
   }
 
   // consecutive variables
@@ -81,19 +75,18 @@ const TEST_BOOL = ( ARR[ 0 ] + ARR[ 1 ] ) * ARR[ 2 ];
 
 console.log( TEST_BOOL );
 
-interface Accumulator { readonly [ key: string ]: number }
+interface Accumulator {
+  readonly [ key: string ]: number;
+}
 
 const reducedArr = ARR.reduce<Accumulator>(
-  ( acc: Accumulator, num: number ) => (
-    { ...acc, [ num ]: num }
-  ),
+  ( acc: Accumulator, num: number ) => ( { ...acc, [ num ]: num } ),
   {}
 );
 
 console.log( reducedArr );
 
-ARR.reverse()
-  .sort();
+ARR.reverse().sort();
 
 class TestClass implements T1 {
   public static readonly TEST_PROPERTY: string = 'TEST';

@@ -8,7 +8,8 @@
     "lint": "eslint . --ext .ts",
     "lint-and-fix": "eslint . --ext .ts --fix",
     "start": "npm run build && node build/index.js",
-    "start:dev": "nodemon"
+    "start:dev": "nodemon",
+    "prepare": "husky install"
   },
   "keywords": [
     "typescript",
@@ -21,8 +22,8 @@
     "@typescript-eslint/eslint-plugin": "^4.27.0",
     "@typescript-eslint/parser": "^4.27.0",
     "eslint": "^7.29.0",
+    "husky": "^7.0.0",
     "nodemon": "^2.0.7",
-    "prettier": "^2.3.2",
     "rimraf": "^3.0.2",
     "ts-node": "^10.0.0",
     "typescript": "^4.3.4"

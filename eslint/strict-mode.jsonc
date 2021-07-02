@@ -1,5 +1,5 @@
 {
-	"rules": {																					
+	"rules": {
 		"strict": [																				/* 	require or disallow strict mode directives */
 			"error",
 			"global"
