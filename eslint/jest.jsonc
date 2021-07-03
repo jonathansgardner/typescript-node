@@ -1,0 +1,46 @@
+{
+  "rules": {
+    /* jest/recommended */
+    // "expect-expect": "warn",                   /* Enforce assertion to be made in a test body */
+    // "no-commented-out-tests": "warn",          /* Disallow commented out tests	*/
+    // "no-conditional-expect": "error",          /* Prevent calling expect conditionally	*/
+    // "no-deprecated-functions": "error",        /* Disallow use of deprecated functions	*/
+    // "no-disabled-tests": "warn",              /* Disallow disabled tests */
+    // "no-done-callback": "error",               /* Avoid using a callback in asynchronous tests and hooks	*/
+    // "no-export": "error",                      /* Disallow using exports in files containing tests	*/
+    // "no-focused-tests": "error",               /* Disallow focused tests	*/
+    // "no-identical-title": "error",	            /* Disallow identical titles	*/
+    // "no-interpolation-in-snapshots": "error",  /* Disallow string interpolation inside snapshots	*/
+    // "no-jasmine-globals": "error",             /* Disallow Jasmine globals	*/
+    // "no-jest-import": "error",                 /* Disallow importing Jest */
+    // "no-mocks-import": "error",                /* Disallow manually importing from __mocks__	*/
+    // "no-standalone-expect": "error",           /* Disallow using expect outside of it or test blocks	*/
+    // "no-test-prefixes": "error",               /* Use .only and .skip over f and x	*/
+    // "valid-describe": "error",                 /* Enforce valid describe() callback */
+    // "valid-expect": "error",                   /* Enforce valid expect() usage */
+    // "valid-expect-in-promise": "error",        /* Enforce having return statement when testing with promises */
+    // "valid-title": "error",                    /* Enforce valid titles */
+
+    "consistent-test-it": "off",                  /* Have control over test and it usages */
+    "lowercase-name": "off",                      /* Enforce lowercase test names */
+    "no-alias-methods": "off",	                  /* Disallow alias methods	*/
+    "no-duplicate-hooks": "off",	                /* Disallow duplicate setup and teardown hooks */
+    "no-hooks": "off",                            /* Disallow setup and teardown hooks */
+    "no-if": "off",                               /* Disallow conditional logic */
+    "no-large-snapshots": "off",                  /* disallow large snapshots */
+    "no-restricted-matchers": "off",              /* Disallow specific matchers & modifiers */
+    "no-test-return-statement": "off",            /* Disallow explicitly returning from tests */
+    "prefer-called-with": "off",                  /* Suggest using toBeCalledWith() or toHaveBeenCalledWith() */
+    "prefer-expect-assertions": "off",            /* Suggest using expect.assertions() OR expect.hasAssertions() */
+    "prefer-hooks-on-top": "off",                 /* Suggest having hooks before any test cases */
+    "prefer-spy-on": "off",                       /* Suggest using jest.spyOn() */
+    "prefer-strict-equal": "off",                 /* Suggest using toStrictEqual() */
+    "prefer-to-be-null": "off",                   /* Suggest using toBeNull()	*/
+    "prefer-to-be-undefined": "off",              /* Suggest using toBeUndefined() */
+    "prefer-to-contain": "off",                   /* Suggest using toContain() */
+    "prefer-to-have-length": "off",               /* Suggest using toHaveLength() */
+    "prefer-todo": "off",                         /* Suggest using test.todo */
+    "require-to-throw-message": "off",            /* Require a message for toThrow() */
+    "require-top-level-describe": "off"           /* Require test cases and hooks to be inside a describe block */
+  }
+}

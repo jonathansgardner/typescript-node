@@ -2,8 +2,7 @@
   "root": true,
   "env": {
     "es2021": true,
-    "node": true,
-    "jest": true
+    "node": true
   },
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -11,13 +10,8 @@
     "project": "./tsconfig.json",
     "sourceType": "module"
   },
-  "plugins": [
-    "@typescript-eslint"
-  ],
   "extends": [
-    /* https://github.com/eslint/eslint/blob/master/conf/eslint-recommended.js */
-    "eslint:recommended",
-
+    "eslint:recommended", // https://github.com/eslint/eslint/blob/master/conf/eslint-recommended.js
     "./eslint/possible-errors.jsonc",
     "./eslint/best-practices.jsonc",
     "./eslint/strict-mode.jsonc",
@@ -29,21 +23,16 @@
     // typescript
     {
       "files": [ "**/*.{ts,tsx}" ],
+      "plugins": [ "@typescript-eslint" ],
       "extends": [
-        /* https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/src/configs/eslint-recommended.ts */
-        "plugin:@typescript-eslint/eslint-recommended",
-
-        /* https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/src/configs/recommended.ts */
-        "plugin:@typescript-eslint/recommended",
-
-        /* https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/src/configs/recommended-requiring-type-checking.ts */
-        "plugin:@typescript-eslint/recommended-requiring-type-checking",
-
+        "plugin:@typescript-eslint/eslint-recommended", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/src/configs/eslint-recommended.ts
+        "plugin:@typescript-eslint/recommended", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/src/configs/recommended.ts
+        "plugin:@typescript-eslint/recommended-requiring-type-checking", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/src/configs/recommended-requiring-type-checking.ts
         "./eslint/typescript-eslint.jsonc",
         "./eslint/typescript-eslint-extensions.jsonc"
       ],
       "rules": {
-        /* typescript-eslint/eslint-recommended */
+        // typescript-eslint/eslint-recommended
         // "constructor-super": "off",										/* require `super()` calls in constructors */
         // "getter-return": "off",												/* enforce `return` statements in getters */
         // "no-const-assign": "off",											/* disallow reassigning `const` variables */
@@ -66,6 +55,17 @@
         // "prefer-spread": "error",											/* require spread operators instead of `.apply()` */
         // "valid-typeof": "off",													/* enforce comparing `typeof` expressions against valid strings */
       }
+    },
+    // jest
+    {
+      "files": [ "**/*.{test,spec}.{js,jsx,ts,tsx}" ],
+      "env": { "jest": true },
+      "plugins": [ "jest" ],
+      "extends": [
+        "plugin:jest/recommended", // https://github.com/jest-community/eslint-plugin-jest/tree/main/docs/rules
+        "plugin:jest/style",
+        "./eslint/jest.jsonc"
+      ]
     }
   ]
 }
