@@ -69,22 +69,22 @@
           "private-static-field",
           "protected-static-field",
           "public-static-field",
-          "static-field",
           "private-decorated-field",
           "protected-decorated-field",
           "public-decorated-field",
-          "decorated-field",
           "private-instance-field",
           "protected-instance-field",
           "public-instance-field",
-          "instance-field",
           "private-abstract-field",
           "protected-abstract-field",
           "public-abstract-field",
-          "abstract-field",
           "private-field",
           "protected-field",
           "public-field",
+          "static-field",
+          "decorated-field",
+          "instance-field",
+          "abstract-field",
           "field",
           // Constructors
           "private-constructor",
@@ -95,22 +95,22 @@
           "private-static-method",
           "protected-static-method",
           "public-static-method",
-          "static-method",
           "private-decorated-method",
           "protected-decorated-method",
           "public-decorated-method",
-          "decorated-method",
           "private-instance-method",
           "protected-instance-method",
           "public-instance-method",
-          "instance-method",
           "private-abstract-method",
           "protected-abstract-method",
           "public-abstract-method",
-          "abstract-method",
           "private-method",
           "protected-method",
           "public-method",
+          "static-method",
+          "decorated-method",
+          "instance-method",
+          "abstract-method",
           "method"
         ]
       }
@@ -154,7 +154,10 @@
     "@typescript-eslint/no-dynamic-delete": "error",																/* Disallow the delete operator with computed key expressions */
     "@typescript-eslint/no-extraneous-class": "error",															/* Forbids the use of classes as namespaces */
     "@typescript-eslint/no-implicit-any-catch": "error",														/* Disallow usage of the implicit any type in catch clauses */
-    "@typescript-eslint/no-invalid-void-type": "error",															/* Disallows usage of void type outside of generic or return types */
+    "@typescript-eslint/no-invalid-void-type": [															      /* Disallows usage of void type outside of generic or return types */
+      "error",
+      { "allowAsThisParameter": true }
+    ],
     "@typescript-eslint/no-parameter-properties": "off",														/* Disallow the use of parameter properties in class constructors */
     "@typescript-eslint/no-require-imports": "error",																/* Disallows invocation of require() */
     "@typescript-eslint/no-type-alias": "off",																			/* Disallow the use of type aliases */
