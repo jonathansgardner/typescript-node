@@ -135,6 +135,10 @@
           "UPPER_CASE"
         ]
       },
+      { // enum values
+        "selector": "enumMember",
+        "format": [ "UPPER_CASE" ]
+      },
       { // static readonly class, and type properties (must be uppercase)
         "selector": "property",
         "modifiers": [
@@ -175,8 +179,11 @@
     "@typescript-eslint/prefer-literal-enum-member": "error",												/* Require that all enum members be literal values to prevent unintended enum member name shadow issues */
     "@typescript-eslint/prefer-nullish-coalescing": "error",												/* Enforce the usage of the nullish coalescing operator instead of logical chaining */
     "@typescript-eslint/prefer-optional-chain": "error",														/* Prefer using concise optional chain expressions instead of chained logical ands */
-    "@typescript-eslint/prefer-readonly": "error",																	/* Requires that private members are marked as readonly if they're never modified outside of the constructor */
-    "@typescript-eslint/prefer-readonly-parameter-types": "error",									/* Requires that function parameters are typed as readonly to prevent accidental mutation of inputs */
+    "@typescript-eslint/prefer-readonly": "error",																  /* Requires that private members are marked as readonly if they're never modified outside of the constructor */
+    "@typescript-eslint/prefer-readonly-parameter-types": [									        /* Requires that function parameters are typed as readonly to prevent accidental mutation of inputs */
+      "error",
+      { "checkParameterProperties": false }
+    ],
     "@typescript-eslint/prefer-reduce-type-parameter": "error",											/* Prefer using type parameter when calling Array#reduce instead of casting */
     "@typescript-eslint/prefer-string-starts-ends-with": "error",										/* Enforce the use of String#startsWith and String#endsWith instead of other equivalent methods of checking substrings */
     "@typescript-eslint/prefer-ts-expect-error": "off",															/* Recommends using @ts-expect-error over @ts-ignore */
