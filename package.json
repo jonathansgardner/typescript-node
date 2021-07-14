@@ -15,7 +15,8 @@
   },
   "keywords": [
     "typescript",
-    "node.js"
+    "node.js",
+    "jest"
   ],
   "author": "Jonathan Gardner",
   "license": "ISC",
