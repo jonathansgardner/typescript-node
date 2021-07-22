@@ -1,70 +1,114 @@
 {
   "rules": {
-    /* eslint:recommended */
-    // "no-mixed-spaces-and-tabs": "error",						/* disallow mixed spaces and tabs for indentation */
-
-    "array-bracket-newline": [												/* enforce linebreaks after opening and before closing array brackets */
+    /* enforce linebreaks after opening and before closing array brackets */
+    "array-bracket-newline": [
       "error",
       { "multiline": true }
     ],
-    "array-bracket-spacing": [												/* enforce consistent spacing inside array brackets */
+
+    /* enforce consistent spacing inside array brackets */
+    "array-bracket-spacing": [
       "error",
       "always"
     ],
-    "array-element-newline": [												/* enforce line breaks after each array element */
+
+    /* enforce line breaks after each array element */
+    "array-element-newline": [
       "error",
       {
         "multiline": true,
         "minItems": 3
       }
     ],
-    "block-spacing": "error",													/* disallow or enforce spaces inside of blocks after opening block and before closing block */
-    "brace-style": [																	/* enforce consistent brace style for blocks */
+
+    /* disallow or enforce spaces inside of blocks after opening block and before closing block */
+    "block-spacing": "error",
+
+    /* enforce consistent brace style for blocks */
+    "brace-style": [
       "error",
       "1tbs",
       { "allowSingleLine": true }
     ],
-    "camelcase": "error",															/* enforce camelcase naming convention */
-    "capitalized-comments": "off",										/* enforce or disallow capitalization of the first letter of a comment */
-    "comma-dangle": [																	/*require or disallow trailing commas */
+
+    /* enforce camelcase naming convention */
+    "camelcase": "error",
+
+    /* enforce or disallow capitalization of the first letter of a comment */
+    "capitalized-comments": "off",
+
+    /*require or disallow trailing commas */
+    "comma-dangle": [
       "error",
       "never"
     ],
-    "comma-spacing": "error",													/* Enforces spacing around commas */
-    "comma-style": "error",														/* enforce consistent comma style */
-    "computed-property-spacing": [										/* enforce consistent spacing inside computed property brackets */
+
+    /* Enforces spacing around commas */
+    "comma-spacing": "error",
+
+    /* enforce consistent comma style */
+    "comma-style": "error",
+
+    /* enforce consistent spacing inside computed property brackets */
+    "computed-property-spacing": [
       "error",
       "always"
     ],
-    "consistent-this": "off",													/* enforce consistent naming when capturing the current execution context */
-    "eol-last": "error",															/* require or disallow newline at the end of files */
-    "func-call-spacing": "error",											/* require or disallow spacing between function identifiers and their invocations */
-    "func-name-matching": [														/* require function names to match the name of the variable or property to which they are assigned */
+
+    /* enforce consistent naming when capturing the current execution context */
+    "consistent-this": "off",
+
+    /* require or disallow newline at the end of files */
+    "eol-last": "error",
+
+    /* require or disallow spacing between function identifiers and their invocations */
+    "func-call-spacing": "error",
+
+    /* require function names to match the name of the variable or property to which they are assigned */
+    "func-name-matching": [
       "error",
       {
         "considerPropertyDescriptor": true,
         "includeCommonJSModuleExports": true
       }
     ],
-    "func-names": "off",															/* require or disallow named `function` expressions */
-    "func-style": [																		/* enforce the consistent use of either `function` declarations or expressions */
+
+    /* require or disallow named `function` expressions */
+    "func-names": "off",
+
+    /* enforce the consistent use of either `function` declarations or expressions */
+    "func-style": [
       "error",
       "declaration",
       { "allowArrowFunctions": true }
     ],
-    "function-call-argument-newline": [								/* enforce line breaks between arguments of a function call */
+
+    /* enforce line breaks between arguments of a function call */
+    "function-call-argument-newline": [
       "error",
       "consistent"
     ],
-    "function-paren-newline": [												/* enforce consistent line breaks inside function parentheses */
+
+    /* enforce consistent line breaks inside function parentheses */
+    "function-paren-newline": [
       "error",
       "multiline-arguments"
     ],
-    "id-denylist": "off",															/* disallow specified identifiers */
-    "id-length": "off",																/* enforce minimum and maximum identifier lengths */
-    "id-match": "off",																/* require identifiers to match a specified regular expression */
-    "implicit-arrow-linebreak": "error",							/* enforce the location of arrow function bodies */
-    "indent": [																				/* enforce consistent indentation */
+
+    /* disallow specified identifiers */
+    "id-denylist": "off",
+
+    /* enforce minimum and maximum identifier lengths */
+    "id-length": "off",
+
+    /* require identifiers to match a specified regular expression */
+    "id-match": "off",
+
+    /* enforce the location of arrow function bodies */
+    "implicit-arrow-linebreak": "error",
+
+    /* enforce consistent indentation */
+    "indent": [
       "error",
       2,
       {
@@ -78,18 +122,30 @@
         "offsetTernaryExpressions": true
       }
     ],
-    "jsx-quotes": "error",														/* enforce the consistent use of either double or single quotes in JSX attributes */
-    "key-spacing": [																	/* enforce consistent spacing before and after keywords */
+
+    /* enforce the consistent use of either double or single quotes in JSX attributes */
+    "jsx-quotes": "error",
+
+    /* enforce consistent spacing before and after keywords */
+    "key-spacing": [
       "error",
       { "mode": "strict" }
     ],
-    "keyword-spacing": "error",												/* enforce consistent spacing before and after keywords */
-    "line-comment-position": "off",										/* enforce position of line comments */
-    "linebreak-style": [															/* enforce consistent linebreak style */
+
+    /* enforce consistent spacing before and after keywords */
+    "keyword-spacing": "error",
+
+    /* enforce position of line comments */
+    "line-comment-position": "off",
+
+    /* enforce consistent linebreak style */
+    "linebreak-style": [
       "error",
       "unix"
     ],
-    "lines-around-comment": [													/* require empty lines around comments */
+
+    /* require empty lines around comments */
+    "lines-around-comment": [
       "error",
       {
         "allowBlockStart": true,
@@ -98,15 +154,22 @@
         "allowArrayStart": true
       }
     ],
-    "lines-between-class-members": [									/* require or disallow an empty line between class members */
+
+    /* require or disallow an empty line between class members */
+    "lines-between-class-members": [
       "error",
       "always",
       { "exceptAfterSingleLine": true }
     ],
-    "max-depth": "warn",															/* enforce a maximum depth that blocks can be nested */
-    "max-len": [																			/* enforce a maximum line length */
+
+    /* enforce a maximum depth that blocks can be nested */
+    "max-depth": "warn",
+
+    /* enforce a maximum line length */
+    "max-len": [
       "error",
       {
+        "code": 100,
         "tabWidth": 2,
         "ignoreUrls": true,
         "ignoreStrings": true,
@@ -114,91 +177,172 @@
         "ignoreRegExpLiterals": true
       }
     ],
-    "max-lines": "off",																/* enforce a maximum number of lines per file */
-    "max-lines-per-function": "off",									/* enforce a maximum number of lines of code in a function */
-    "max-nested-callbacks": "off",										/* enforce a maximum depth that callbacks can be nested */
-    "max-params": [																		/* enforce a maximum number of parameters in function definitions */
+
+    /* enforce a maximum number of lines per file */
+    "max-lines": "off",
+
+    /* enforce a maximum number of lines of code in a function */
+    "max-lines-per-function": "off",
+
+    /* enforce a maximum depth that callbacks can be nested */
+    "max-nested-callbacks": "off",
+
+    /* enforce a maximum number of parameters in function definitions */
+    "max-params": [
       "error",
       3
     ],
-    "max-statements": "off",													/* enforce a maximum number of statements allowed in function blocks */
-    "max-statements-per-line": "error",								/* enforce a maximum number of statements allowed per line */
-    "multiline-comment-style": [											/* enforce a particular style for multiline comments */
+
+    /* enforce a maximum number of statements allowed in function blocks */
+    "max-statements": "off",
+
+    /* enforce a maximum number of statements allowed per line */
+    "max-statements-per-line": "error",
+
+    /* enforce a particular style for multiline comments */
+    "multiline-comment-style": [
       "error",
       "separate-lines"
     ],
-    "multiline-ternary": [														/* enforce newlines between operands of ternary expressions */
+
+    /* enforce newlines between operands of ternary expressions */
+    "multiline-ternary": [
       "error",
       "always-multiline"
     ],
-    "new-cap": "error",																/* require constructor names to begin with a capital letter */
-    "new-parens": "error",														/* enforce or disallow parentheses when invoking a constructor with no arguments */
-    "newline-per-chained-call": [											/* require a newline after each call in a method chain */
+
+    /* require constructor names to begin with a capital letter */
+    "new-cap": "error",
+
+    /* enforce or disallow parentheses when invoking a constructor with no arguments */
+    "new-parens": "error",
+
+    /* require a newline after each call in a method chain */
+    "newline-per-chained-call": [
       "error",
       { "ignoreChainWithDepth": 2 }
     ],
-    "no-array-constructor": "error",									/* disallow `Array` constructors */
-    "no-bitwise": "off",															/* disallow bitwise operators */
-    "no-continue": "off",															/* disallow `continue` statements */
-    "no-inline-comments": "off",											/* disallow inline comments after code */
-    "no-lonely-if": "error",													/* disallow `if` statements as the only statement in `else` blocks */
-    "no-mixed-operators": "error",										/* disallow mixed binary operators */
-    "no-multi-assign": "error",												/* disallow use of chained assignment expressions */
-    "no-multiple-empty-lines": [											/* disallow multiple empty lines */
+
+    /* disallow `Array` constructors */
+    "no-array-constructor": "error",
+
+    /* disallow bitwise operators */
+    "no-bitwise": "off",
+
+    /* disallow `continue` statements */
+    "no-continue": "off",
+
+    /* disallow inline comments after code */
+    "no-inline-comments": "off",
+
+    /* disallow `if` statements as the only statement in `else` blocks */
+    "no-lonely-if": "error",
+
+    /* disallow mixed binary operators */
+    "no-mixed-operators": "error",
+
+    /* disallow mixed spaces and tabs for indentation */
+    "no-mixed-spaces-and-tabs": "error",
+
+    /* disallow use of chained assignment expressions */
+    "no-multi-assign": "error",
+
+    /* disallow multiple empty lines */
+    "no-multiple-empty-lines": [
       "error",
       {
         "max": 1,
         "maxBOF": 0
       }
     ],
-    "no-negated-condition": "warn",										/* disallow negated conditions */
-    "no-nested-ternary": "off",												/* disallow nested ternary expressions */
-    "no-new-object": "error",													/* disallow `Object` constructors */
-    "no-plusplus": "off",															/* disallow the unary operators `++` and `--` */
-    "no-restricted-syntax": "off",										/* disallow specified syntax */
-    "no-tabs": "off",																	/* disallow all tabs */
-    "no-ternary": "off",															/* disallow ternary operators */
-    "no-trailing-spaces": "error",										/* disallow trailing whitespace at the end of lines */
+
+    /* disallow negated conditions */
+    "no-negated-condition": "warn",
+
+    /* disallow nested ternary expressions */
+    "no-nested-ternary": "off",
+
+    /* disallow `Object` constructors */
+    "no-new-object": "error",
+
+    /* disallow the unary operators `++` and `--` */
+    "no-plusplus": "error",
+
+    /* disallow specified syntax */
+    "no-restricted-syntax": "off",
+
+    /* disallow all tabs */
+    "no-tabs": "off",
+
+    /* disallow ternary operators */
+    "no-ternary": "off",
+
+    /* disallow trailing whitespace at the end of lines */
+    "no-trailing-spaces": "error",
+
+    /* disallow dangling underscores in identifiers */
     "no-underscore-dangle": [
       "error",
-      { "enforceInMethodNames": true }								/* disallow dangling underscores in identifiers */
+      { "enforceInMethodNames": true }
     ],
-    "no-unneeded-ternary": [													/* disallow ternary operators when simpler alternatives exist */
+
+    /* disallow ternary operators when simpler alternatives exist */
+    "no-unneeded-ternary": [
       "error",
       { "defaultAssignment": false }
     ],
-    "no-whitespace-before-property": "error",					/* disallow whitespace before properties */
-    "nonblock-statement-body-position": "error",			/* enforce the location of single-line statements */
-    "object-curly-newline": [													/* enforce consistent line breaks after opening and before closing braces */
+
+    /* disallow whitespace before properties */
+    "no-whitespace-before-property": "error",
+
+    /* enforce the location of single-line statements */
+    "nonblock-statement-body-position": "error",
+
+    /* enforce consistent line breaks after opening and before closing braces */
+    "object-curly-newline": [
       "error",
       { "multiline": true }
     ],
-    "object-curly-spacing": [													/* enforce consistent spacing inside braces */
+
+    /* enforce consistent spacing inside braces */
+    "object-curly-spacing": [
       "error",
       "always"
     ],
-    "object-property-newline": [											/* enforce placing object properties on separate lines */
+
+    /* enforce placing object properties on separate lines */
+    "object-property-newline": [
       "error",
       { "allowAllPropertiesOnSameLine": true }
     ],
-    "one-var": [																			/* enforce variables to be declared either together or separately in functions */
+
+    /* enforce variables to be declared either together or separately in functions */
+    "one-var": [
       "error",
       "never"
     ],
-    "one-var-declaration-per-line": [									/* 	require or disallow newlines around variable declarations */
+
+    /* require or disallow newlines around variable declarations */
+    "one-var-declaration-per-line": [
       "error",
       "always"
     ],
-    "operator-assignment": "error",										/* require or disallow assignment operator shorthand where possible */
-    "operator-linebreak": [														/* enforce consistent linebreak style for operators */
+
+    /* require or disallow assignment operator shorthand where possible */
+    "operator-assignment": "error",
+
+    /* enforce consistent linebreak style for operators */
+    "operator-linebreak": [
       "error",
       "before"
     ],
-    "padded-blocks": [																/* require or disallow padding within blocks */
+
+    /* require or disallow padding within blocks */
+    "padded-blocks": [
       "error",
       "never"
     ],
-    "padding-line-between-statements": [							/* require or disallow padding lines between statements */
+    "padding-line-between-statements": [/* require or disallow padding lines between statements */
       "error",
       { // always after variables
         "blankLine":"always",
@@ -330,29 +474,49 @@
         "next": "directive"
       }
     ],
-    "prefer-exponentiation-operator": "error",				/* disallow the use of `Math.pow` in favor of the `**` operator */
-    "prefer-object-spread": "error",									/* disallow using Object.assign with an object literal as the first argument and prefer the use of object spread instead. */
-    "quote-props": [												          /* require quotes around object literal property names */
+
+    /* disallow the use of `Math.pow` in favor of the `**` operator */
+    "prefer-exponentiation-operator": "error",
+
+    /* disallow using Object.assign with an object literal as the first argument and prefer the use of object spread instead. */
+    "prefer-object-spread": "error",
+    "quote-props": [
       "error",
       "as-needed",
       { "numbers": true }
     ],
-    "quotes": [												          			/* enforce the consistent use of either backticks, double, or single quotes */
+
+    /* enforce the consistent use of either backticks, double, or single quotes */
+    "quotes": [
       "error",
       "single",
       { "avoidEscape": true }
     ],
-    "semi": "error",												          /* require or disallow semicolons instead of ASI */
-    "semi-spacing": "error",												  /* enforce consistent spacing before and after semicolons */
-    "semi-style": "error",												  	/* enforce location of semicolons */
-    "sort-keys": [																		/* 	require object keys to be sorted */
+
+    /* require or disallow semicolons instead of ASI */
+    "semi": "error",
+
+    /* enforce consistent spacing before and after semicolons */
+    "semi-spacing": "error",
+
+    /* enforce location of semicolons */
+    "semi-style": "error",
+
+    /* require object keys to be sorted */
+    "sort-keys": [
       "error",
       "asc",
       { "natural": true }
     ],
-    "sort-vars": "error",															/* require variables within the same declaration block to be sorted */
-    "space-before-blocks": "error",										/* enforce consistent spacing before blocks */
-    "space-before-function-paren": [									/* 	enforce consistent spacing before `function` definition opening parenthesis */
+
+    /* require variables within the same declaration block to be sorted */
+    "sort-vars": "error",
+
+    /* enforce consistent spacing before blocks */
+    "space-before-blocks": "error",
+
+    /* enforce consistent spacing before `function` definition opening parenthesis */
+    "space-before-function-paren": [
       "error",
       {
         "anonymous": "never",
@@ -360,19 +524,35 @@
         "asyncArrow": "always"
       }
     ],
-    "space-in-parens": [												  		/* enforce consistent spacing inside parentheses */
+
+    /* enforce consistent spacing inside parentheses */
+    "space-in-parens": [
       "error",
       "always"
     ],
-    "space-infix-ops": "error",												/* require spacing around infix operators */
-    "space-unary-ops": "error",												/* enforce consistent spacing before or after unary operators */
-    "spaced-comment": [												  			/* enforce consistent spacing after the `//` or `/*` in a comment */
+
+    /* require spacing around infix operators */
+    "space-infix-ops": "error",
+
+    /* enforce consistent spacing before or after unary operators */
+    "space-unary-ops": "error",
+
+    /* enforce consistent spacing after the `//` or `/*` in a comment */
+    "spaced-comment": [
       "error",
       "always"
     ],
-    "switch-colon-spacing": "error",									/* enforce spacing around colons of switch statements */
-    "template-tag-spacing": "error",									/* require or disallow spacing between template tags and their literals */
-    "unicode-bom": "off",															/* require or disallow Unicode byte order mark (BOM) */
-    "wrap-regex": "error"															/* require parenthesis around regex literals */
+
+    /* enforce spacing around colons of switch statements */
+    "switch-colon-spacing": "error",
+
+    /* require or disallow spacing between template tags and their literals */
+    "template-tag-spacing": "error",
+
+    /* require or disallow Unicode byte order mark (BOM) */
+    "unicode-bom": "off",
+
+    /* require parenthesis around regex literals */
+    "wrap-regex": "error"
   }
 }

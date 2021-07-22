@@ -3,7 +3,6 @@ const a = 2;
 const b = 1;
 const c = 3;
 const d = 5;
-
 let v = 5;
 
 v += 3;
@@ -59,7 +58,7 @@ generator();
 
   // consecutive variables
   let y = 15;
-  const x = ( y++, arg2 );
+  const x = ( y += 1, arg2 );
 
   // expression
   printMessage( x );

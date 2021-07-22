@@ -11,7 +11,6 @@
     "sourceType": "module"
   },
   "extends": [
-    "eslint:recommended", // https://github.com/eslint/eslint/blob/master/conf/eslint-recommended.js
     "./eslint/possible-errors.jsonc",
     "./eslint/best-practices.jsonc",
     "./eslint/strict-mode.jsonc",
