@@ -1,18 +1,30 @@
-### Contents
+# Style Guide
 
-1. Strings
-1. Numbers
-1. Booleans
-1. Arrays
-1. Objects
-1. Functions
-1. Variables
-1. Destructuring
-1. Imports & Exports
+## Table of Contents
 
-### Strings
+1. [Strings](#strings)
+1. [Numbers](#numbers)
+1. [Booleans](#booleans)
+1. [Arrays](#arrays)
+1. [Objects](#objects)
+1. [Classes & Constructors](#classes--constructors)
+1. [Functions](#functions)
+1. [Variables](#variables)
+1. [Destructuring](#destructuring)
+1. [Imports & Exports](#imports--exports)
 
-- Use string literals `'' ""` or template literals ` `` `, and not the `String` constructor, to create strings. eslint: [`no-new-wrappers`](https://eslint.org/docs/rules/no-new-wrappers)
+## Goals
+
+- Best Practices
+- Clarity
+- Clean Git Diffs
+- Consistency
+- Performance
+- Readability
+
+## Strings
+
+- Use string literals `''` `""` or template literals ` `` `, and not the `String` constructor, to create strings. eslint: [`no-new-wrappers`](https://eslint.org/docs/rules/no-new-wrappers)
 
 - Use single quotes `''` for strings wherever possible. eslint: [`quotes`](https://eslint.org/docs/rules/quotes)
 
@@ -30,7 +42,7 @@
 
 - Do not use `eval()` on a string. eslint: [`no-eval`](https://eslint.org/docs/rules/no-eval)
 
-### Numbers
+## Numbers
 
 - Use numeric or floating point literals, and not the `Number` constructor, to create numbers. eslint: [`no-new-wrappers`](https://eslint.org/docs/rules/no-new-wrappers)
 
@@ -46,13 +58,13 @@
 
 - Use the radix argument when parsing any non-decimal value with `parseInt()`.
 
-### Booleans
+## Booleans
 
 - Use boolean literals, and not the `Boolean` constructor, to create booleans. eslint: [`no-new-wrappers`](https://eslint.org/docs/rules/no-new-wrappers)
 
 - Do not unneccessarily type cast a value to a boolean via double negation `!!` or a `Boolean()` call. eslint: [`no-extra-boolean-cast`](https://eslint.org/docs/rules/no-extra-boolean-cast)
 
-### Arrays
+## Arrays
 
 - Use array literals `[]`, and not the `Array` constructor, to create arrays. eslint: [`no-array-constructor`](https://eslint.org/docs/rules/no-array-constructor)
 
@@ -62,7 +74,7 @@
 
 - Avoid sparse arrays. eslint: [`no-sparse-arrays`](https://eslint.org/docs/rules/no-sparse-arrays)
 
-### Objects
+## Objects
 
 - Use object literals `{}`, and not the `Object` constructor, to create new objects. eslint: [`no-new-object`](https://eslint.org/docs/rules/no-new-object)
 
@@ -78,13 +90,37 @@
 
 - Do not call Object.prototype methods directly on object instances. eslint: [`no-prototype-builtins`](https://eslint.org/docs/rules/no-prototype-builtins)
 
-### Functions
+- Use dot notation to access properties on an object. eslint: [`dot-notation`](https://eslint.org/docs/rules/dot-notation)
 
-- Use function or arrow function expressions, and not the `Function` constructor, to create new functions. eslint: [`no-new-func`](https://eslint.org/docs/rules/no-new-func)
+- Only use bracket notation when accessing an object property with a variable.
+
+## Classes & Constructors
+
+- Use Class Syntax. Avoid manipulating `prototype` directly.
+
+- Do not define empty constructor functions. This includes constructors the only delegate to a parent class. eslint: [`no-useless-constructor`](https://eslint.org/docs/rules/no-useless-constructor)
+
+- Do not duplicate class members. eslint: [`no-dupe-class-members`](https://eslint.org/docs/rules/no-dupe-class-members)
+
+- Non-static class methods should use this. eslint: [`class-methods-use-this`](https://eslint.org/docs/rules/class-methods-use-this)
+
+## Functions
+
+- Use function declarations or arrow function expressions, and not the `Function` constructor, to create new functions. eslint: [`no-new-func`](https://eslint.org/docs/rules/no-new-func)
+
+- Use function declarations fro named functions. eslint: [`func-style`](https://eslint.org/docs/rules/func-style)
+
+- Use arrow function notation for anonymous functions such as inline callbacks. eslint: [`prefer-arrow-callback`](https://eslint.org/docs/rules/prefer-arrow-callback)
+
+- Use implicit return statements for arrow functions that return a single expression with no side effects. eslint: [`arrow-body-style`](https://eslint.org/docs/rules/arrow-body-style)
+
+- Wrap multi-line implicit returns in parenthesis.
 
 - Wrap immediately invoked funtion expressions in parenthesis. eslint: [`wrap-iife`](https://eslint.org/docs/rules/wrap-iife)
 
 - Never declare functions in a non-function block. eslint: [`no-loop-func`](https://eslint.org/docs/rules/no-loop-func)
+
+- Do not use functions before they are declared. eslint: [`no-use-before-define`](https://eslint.org/docs/rules/no-use-before-define)
 
 - Use rest parameters instead of the `arguments` variable for variadic functions. eslint: [`prefer-rest-params`](https://eslint.org/docs/rules/prefer-rest-params)
 
@@ -92,9 +128,11 @@
 
 - Do not mutate function parameters. eslint: [`no-param-reassign/props`](https://eslint.org/docs/rules/no-param-reassign#props)
 
+- Avoid functions that accept more than 3 parameters. eslint: [`max-params`](https://eslint.org/docs/rules/max-params)
+
 - Use the spread operator `...` to call variadic functions. eslint: [`prefer-spread`](https://eslint.org/docs/rules/prefer-spread)
 
-### Variables
+## Variables
 
 - Use `const` or `let` to declare variables. eslint: [`no-var`](https://eslint.org/docs/rules/no-var)
 
@@ -116,7 +154,7 @@
 
 - Do not use the `delete` operator on variables. eslint: [`no-delete-var`](https://eslint.org/docs/rules/no-delete-var)
 
-### Destructuring
+## Destructuring
 
 - Use destructuring when creating variables from an array or object property. eslint: [`prefer-destructuring`](https://eslint.org/docs/rules/prefer-destructuring)
 
@@ -124,6 +162,6 @@
 
 - Do not rename destructured assignments to the same name. eslint: [`no-useless-rename`](https://eslint.org/docs/rules/no-useless-rename)
 
-### Imports & Exports
+## Imports & Exports
 
 - Do not rename imports and exports to the same name. eslint: [`no-useless-rename`](https://eslint.org/docs/rules/no-useless-rename)

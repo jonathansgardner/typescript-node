@@ -1,11 +1,15 @@
 // global.a = 5;
 
-// const numbers = [
-//   3,
-//   10,
-//   6
-// ];
+const numbers = [
+  3,
+  10,
+  6
+];
 // const sortedNumbers = numbers.sort( number => number > 5 );
+
+numbers.map( num => {
+  throw new Error( num );
+} );
 
 // console.log( sortedNumbers );
 
